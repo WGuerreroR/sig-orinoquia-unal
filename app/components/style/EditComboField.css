@@ -1,0 +1,12 @@
+div.edit-multi-select {
+    border: 1px solid var(--border-color);
+    padding: 0.25em;
+    background-color: var(--input-bg-color);
+    max-height: 5em;
+    overflow-y: auto;
+    text-align: left;
+}
+
+div.edit-multi-select label > input {
+    margin-right: 0.25em;
+}

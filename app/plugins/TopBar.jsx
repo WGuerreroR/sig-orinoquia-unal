@@ -1,0 +1,266 @@
+/**
+ * Copyright 2016-2024 Sourcepole AG
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React from 'react';
+import {connect} from 'react-redux';
+
+import classnames from 'classnames';
+import {remove as removeDiacritics} from 'diacritics';
+import PropTypes from 'prop-types';
+
+import {toggleFullscreen} from '../actions/display';
+import {openExternalUrl, setTopbarHeight} from '../actions/windows';
+import {Swipeable} from '../components/Swipeable';
+import ConfigUtils from '../utils/ConfigUtils';
+import LocaleUtils from '../utils/LocaleUtils';
+import {registerSearchProvider, SearchResultType, unregisterSearchProvider} from '../utils/SearchProviders';
+import ThemeUtils from '../utils/ThemeUtils';
+
+import './style/TopBar.css';
+
+
+/**
+ * Top bar, containing the logo, searchbar, task buttons and app menu.
+ */
+class TopBar extends React.Component {
+    static propTypes = {
+        /** Whether opening the app menu clears the active task. */
+        appMenuClearsTask: PropTypes.bool,
+        /** Whether show an appMenu compact (menu visible on icons hover) - Only available for desktop client. */
+        appMenuCompact: PropTypes.bool,
+        /** Whether to display the filter field in the app menu. */
+        appMenuFilterField: PropTypes.bool,
+        /** Whether to hide the app menu (useful primarely as a theme specific setting). */
+        appMenuHidden: PropTypes.bool,
+        /** The shortcut for tiggering the app menu, i.e. alt+shift+m. */
+        appMenuShortcut: PropTypes.string,
+        /** Whether to open the app menu on application startup. */
+        appMenuVisibleOnStartup: PropTypes.bool,
+        components: PropTypes.object,
+        currentTheme: PropTypes.object,
+        fullscreen: PropTypes.bool,
+        /** The logo file format. */
+        logoFormat: PropTypes.string,
+        /** The logo image URL if a different source than the default `assets/img/logo.<ext>` and `assets/img/logo-mobile.<ext>` is desired. */
+        logoSrc: PropTypes.string,
+        /** The hyperlink to open when the logo is clicked. */
+        logoUrl: PropTypes.string,
+        mapMargins: PropTypes.object,
+        /** The menu items. Refer to the corresponding chapter of the viewer documentation and the sample config.json. */
+        menuItems: PropTypes.array,
+        openExternalUrl: PropTypes.func,
+        /** Whether to register a search provider which allows searching menu tasks through the global search field. */
+        registerTaskSearchProvider: PropTypes.bool,
+        /** Options passed down to the search component. */
+        searchOptions: PropTypes.shape({
+            /** Whether to show the search filter widget. */
+            allowSearchFilters: PropTypes.bool,
+            /** Whether to hide the result labels on the map. */
+            hideResultLabels: PropTypes.bool,
+            /** The style used for highlighting search result geometries. */
+            highlightStyle: PropTypes.shape({
+                /* Stroke color rgba array, i.e. [255, 0, 0, 0.5] */
+                strokeColor: PropTypes.array,
+                /* Stroke width */
+                strokeWidth: PropTypes.number,
+                /* Stroke dash/gap pattern array. Empty for solid line. */
+                strokeDash: PropTypes.array,
+                /* Fill color rgba array, i.e. [255, 0, 0, 0.33] */
+                fillColor: PropTypes.array
+            }),
+            /** Minimum scale denominator when zooming to search result. */
+            minScaleDenom: PropTypes.number,
+            /** Result count limit which is passed to the search provider. */
+            resultLimit: PropTypes.number,
+            /** Whether to collapse search sections by default. */
+            sectionsDefaultCollapsed: PropTypes.bool,
+            /** Whether to show a highlight marker in the center of the search result geometry. */
+            showHighlightMarker: PropTypes.bool,
+            /** Whether to show the layer tree after selecting a theme result. */
+            showLayerAfterChangeTheme: PropTypes.bool,
+            /** Whether to show layer results before pkaces in the result menu. */
+            showLayerResultsBeforePlaces: PropTypes.bool,
+            /** Whether to replace the search text with the selected search result text. */
+            showResultInSearchText: PropTypes.bool,
+            /** Whether to zoom to layer search results. */
+            zoomToLayers: PropTypes.bool
+        }),
+        setTopbarHeight: PropTypes.func,
+        toggleFullscreen: PropTypes.func,
+        /** The toolbar. Refer to the corresponding chapter of the viewer documentation and the sample config.json. */
+        toolbarItems: PropTypes.array,
+        /** The keyboard shortcut prefix for triggering toolbar tasks. I.e. alt+shift. The task are then triggered by <prefix>+{1,2,3,...} for the 1st, 2nd, 3rd... toolbar icon. */
+        toolbarItemsShortcutPrefix: PropTypes.string
+    };
+    static defaultProps = {
+        searchOptions: {
+            showHighlightMarker: true,
+            showResultInSearchText: true,
+            minScaleDenom: 1000
+        },
+        menuItems: [],
+        toolbarItems: [],
+        logoFormat: "svg"
+    };
+    state = {
+        allowedMenuItems: [],
+        allowedToolbarItems: []
+    };
+    componentDidMount() {
+        this.setState({
+            allowedToolbarItems: ThemeUtils.allowedItems(this.props.toolbarItems, this.props.currentTheme),
+            allowedMenuItems: ThemeUtils.allowedItems(this.props.menuItems, this.props.currentTheme)
+        });
+        if (this.props.registerTaskSearchProvider) {
+            registerSearchProvider("tasksearch", {
+                label: LocaleUtils.tr("search.tasks"),
+                onSearch: this.searchTasks
+            });
+        }
+    }
+    componentWillUnmount() {
+        if (this.props.registerTaskSearchProvider) {
+            unregisterSearchProvider("tasksearch");
+        }
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.currentTheme !== prevProps.currentTheme) {
+            this.setState({
+                allowedToolbarItems: ThemeUtils.allowedItems(this.props.toolbarItems, this.props.currentTheme),
+                allowedMenuItems: ThemeUtils.allowedItems(this.props.menuItems, this.props.currentTheme)
+            });
+        }
+    }
+    render() {
+        let logo;
+        const assetsPath = ConfigUtils.getAssetsPath();
+        const isMobile = ConfigUtils.isMobile();
+        if (isMobile) {
+            logo = assetsPath + "/img/logo-mobile." + this.props.logoFormat;
+        } else {
+            logo = assetsPath + "/img/logo."  + this.props.logoFormat;
+        }
+
+        const classes = classnames({
+            TopBar: true,
+            mobile: isMobile,
+            fullscreen: this.props.fullscreen
+        });
+        let logoEl = (<img className="topbar-logo" src={this.props.logoSrc || logo} />);
+        if (this.props.logoUrl) {
+            logoEl = (<a href={this.props.logoUrl} rel="noreferrer" target="_blank">{logoEl}</a>);
+        }
+        // Convert legacy minScale option to minScaleDenom
+        const searchOptions = {...TopBar.defaultProps.searchOptions, ...this.props.searchOptions};
+        searchOptions.minScaleDenom = searchOptions.minScaleDenom || searchOptions.minScale;
+        delete searchOptions.minScale;
+        // Menu compact only available for desktop client
+        const menuCompact = !isMobile ? this.props.appMenuCompact : false;
+        // Keep menu open when appMenu is in compact mode (Visible on Hover)
+        const keepMenuOpen = menuCompact;
+        // Menu should be visible on startup when appMenu is in compact mode (Visible on Hover)
+        const showOnStartup = this.props.appMenuVisibleOnStartup || menuCompact;
+        const style = {
+            marginLeft: this.props.mapMargins.outerLeft + 'px',
+            marginRight: this.props.mapMargins.outerRight + 'px'
+        };
+        return (
+            <Swipeable
+                onSwipedDown={() => this.props.toggleFullscreen(false)}
+                onSwipedUp={() => this.props.toggleFullscreen(true)}
+            >
+                <div className={classes} ref={this.storeHeight} style={style}>
+                    {logoEl}
+                    <div className="topbar-center-span">
+                        {this.props.components.Search ? (
+                            <div className="topbar-search-container">
+                                <this.props.components.Search searchOptions={searchOptions}/>
+                            </div>
+                        ) : null}
+                        {this.props.components.Toolbar ? (
+                            <this.props.components.Toolbar
+                                openExternalUrl={this.openUrl}
+                                toolbarItems={this.state.allowedToolbarItems}
+                                toolbarItemsShortcutPrefix={this.props.toolbarItemsShortcutPrefix} />
+                        ) : null}
+                    </div>
+                    {this.props.components.AppMenu && !this.props.appMenuHidden ? (
+                        <this.props.components.AppMenu
+                            appMenuClearsTask={this.props.appMenuClearsTask}
+                            appMenuShortcut={this.props.appMenuShortcut}
+                            buttonLabel={LocaleUtils.tr("appmenu.menulabel")}
+                            keepMenuOpen={keepMenuOpen}
+                            menuCompact={menuCompact}
+                            menuItems={this.state.allowedMenuItems}
+                            openExternalUrl={this.openUrl}
+                            showFilterField={this.props.appMenuFilterField}
+                            showOnStartup={showOnStartup} />
+                    ) : null}
+                    {this.props.components.FullscreenSwitcher ? (
+                        <this.props.components.FullscreenSwitcher />
+                    ) : null}
+                </div>
+            </Swipeable>
+        );
+    }
+    openUrl = (url, target, title, icon) => {
+        if (target === "iframe") {
+            target = ":iframedialog:externallinkiframe";
+        }
+        this.props.openExternalUrl(url, target, {title, icon});
+    };
+    storeHeight = (el) => {
+        if (el) {
+            this.props.setTopbarHeight(el.clientHeight);
+        }
+    };
+    searchTasks = (text, searchParams, callback) => {
+        const filter = new RegExp(removeDiacritics(text).replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&"), "i");
+        const results = [];
+        this.searchTaskGroup(results, filter, this.state.allowedMenuItems);
+        if (results.length > 0) {
+            callback({results: [{
+                id: "tasks",
+                title: LocaleUtils.tr("search.tasks"),
+                type: SearchResultType.TASK,
+                items: results
+            }]});
+        } else {
+            callback({results: []});
+        }
+    };
+    searchTaskGroup = (results, filter, group) => {
+        group.forEach(item => {
+            if (item.subitems) {
+                this.searchTaskGroup(results, filter, item.subitems);
+            } else {
+                const label = item.title ? LocaleUtils.tr(item.title) : LocaleUtils.tr("appmenu.items." + item.key + (item.mode || ""));
+                if (removeDiacritics(label).match(filter)) {
+                    results.push({
+                        id: "tasks:" + results.length,
+                        text: label,
+                        task: item
+                    });
+                }
+            }
+        });
+    };
+}
+
+export default (components) => {
+    return connect((state) => ({
+        fullscreen: state.display.fullscreen,
+        components: components,
+        currentTheme: state.theme.current,
+        mapMargins: state.windows.mapMargins
+    }), {
+        toggleFullscreen: toggleFullscreen,
+        openExternalUrl: openExternalUrl,
+        setTopbarHeight: setTopbarHeight
+    })(TopBar);
+};

@@ -1,0 +1,3 @@
+data/postgis/*
+data/grafana/*
+api/__pycache__/
