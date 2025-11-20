@@ -49,7 +49,7 @@ services:
   qgis-server:
     image: camptocamp/qgis-server:3.44
     ports:
-    - 8088:80
+    - 8080:80
     volumes:
     - ./data/qgisserver/projects:/data:ro
     environment:
