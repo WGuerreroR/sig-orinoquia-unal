@@ -45,3 +45,15 @@ services:
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
     restart: unless-stopped
+
+  qgis-server:
+    image: camptocamp/qgis-server:3.44
+    ports:
+    - 8088:80
+    volumes:
+    - ./data/qgisserver/projects:/data:ro
+    environment:
+    - LANG=en_EN.UTF-8
+    - QGIS_PROJECT_FILE=/data/sede_orinoquia.qgz
+    - QGIS_SERVER_LOG_LEVEL=0  # INFO (log all requests)
+    - DEBUG=1                  # display env before spawning QGIS Server
