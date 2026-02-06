@@ -6,7 +6,7 @@ COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
 COPY . .
-RUN yarn prod
+
 
 # === Deploy Stage ===
 FROM nginx:stable-alpine
