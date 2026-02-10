@@ -813,27 +813,6 @@
               ]
             },
             "dimensions": []
-          },
-          {
-            "name": "OpenStreetMap",
-            "title": "OpenStreetMap",
-            "visibility": true,
-            "queryable": true,
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -180,
-                -85.051129,
-                180,
-                85.051129
-              ]
-            },
-            "dimensions": []
           }
         ],
         "expanded": true,
@@ -860,7 +839,6 @@
         ],
         "mapCrs": "EPSG:4326",
         "drawingOrder": [
-          "OpenStreetMap",
           "suelos",
           "coberturas",
           "areas_protegidas",
@@ -897,7 +875,7 @@
         "featureInfoUrl": "http://146.148.65.245:8080/?",
         "printUrl": "http://146.148.65.245:8080/?",
         "editConfig": null,
-        "thumbnail": "img/genmapthumbs/146.148.65.245:8080.png"
+        "thumbnail": "img/mapthumbs/sig_orinoquia.png"
       }
     ],
     "defaultTheme": "root",

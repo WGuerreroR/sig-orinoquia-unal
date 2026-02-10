@@ -808,28 +808,8 @@
                 ]
               },
               "dimensions": []
-            },
-            {
-              "name": "OpenStreetMap",
-              "title": "OpenStreetMap",
-              "visibility": true,
-              "queryable": true,
-              "opacity": 255,
-              "styles": {
-                "predeterminado": "predeterminado"
-              },
-              "style": "predeterminado",
-              "bbox": {
-                "crs": "EPSG:4326",
-                "bounds": [
-                  -180,
-                  -85.051129,
-                  180,
-                  85.051129
-                ]
-              },
-              "dimensions": []
             }
+            
           ],
           "expanded": true,
           "externalLayers": [],
