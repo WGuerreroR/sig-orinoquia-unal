@@ -1,1251 +1,1238 @@
 {
-    "defaultScales": [100000000, 50000000, 25000000, 10000000, 4000000, 2000000, 1000000, 400000, 200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100, 50,10],
-    "defaultPrintGrid": [
-        {"s": 10000000, "x": 1000000, "y": 1000000},
-        {"s": 1000000, "x": 100000, "y": 100000},
-        {"s": 100000, "x": 10000, "y": 10000},
-        {"s": 10000, "x": 1000, "y": 1000},
-        {"s": 1000, "x": 100, "y": 100},
-        {"s": 100, "x": 10, "y": 10}
-    ],
-    "defaultWMSVersion": "1.3.0",
-    "defaultBackgroundLayers": [],
-    "defaultSearchProviders": ["coordinates"],
-    "defaultMapCrs": "EPSG:4326",
-    "defaultTheme": "root",
-    "themes": {
-        "title": "root",
-        "subdirs": [],
-        "items": [
-          {
-            "url": "http://146.148.65.245:8080",
-            "id": "146.148.65.245:8080",
-            "title": "Sede Orinoquía",
-            "description": "",
-            "attribution": {
-              "Title": {
-                "Title": "Sede Orinoquía",
-                "OnlineResource": "https://orinoquia.unal.edu.co/"
-              },
-              "OnlineResource": ""
+  "defaultScales": [100000000, 50000000, 25000000, 10000000, 4000000, 2000000, 1000000, 400000, 200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100, 50,10],
+  "defaultWMSVersion": "1.3.0",
+  "defaultBackgroundLayers": [],
+  "defaultSearchProviders": ["coordinates"],
+  "defaultMapCrs": "EPSG:4326",
+  "defaultTheme": "root",
+  "themes": {
+      "title": "root",
+      "subdirs": [],
+      "items": [
+        {
+          "url": "http://146.148.65.245:8080",
+          "id": "146.148.65.245:8080",
+          "title": "Sede Orinoquía",
+          "description": "",
+          "attribution": {
+            "Title": {
+              "Title": "Sede Orinoquía",
+              "OnlineResource": "https://orinoquia.unal.edu.co/"
             },
-            "abstract": "",
-            "keywords": "",
-            "onlineResource": "http://146.148.65.245:8080/",
-            "contact": {
-              "person": "",
-              "organization": "",
-              "position": "",
-              "phone": "",
-              "email": ""
-            },
-            "availableFormats": [
-              "image/jpeg",
-              "image/png",
-              "image/png; mode=16bit",
-              "image/png; mode=8bit",
-              "image/png; mode=1bit",
-              "application/dxf",
-              "application/pdf"
-            ],
-            "version": "1.3.0",
-            "infoFormats": [
-              "text/plain",
-              "text/html",
-              "text/xml",
-              "application/vnd.ogc.gml",
-              "application/vnd.ogc.gml/3.1.1",
-              "application/json",
-              "application/geo+json"
-            ],
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -180,
-                -85.051129,
-                180,
-                85.051129
-              ]
-            },
-            "initialBbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -180,
-                -85.051129,
-                180,
-                85.051129
-              ]
-            },
-            "scales": [
-              150000,
-              100000,
-              80000,
-              40000,
-              20000,
-              10000,
-              8000,
-              6000,
-              4000,
-              2000,
-              1000,
-              500,
-              250,
-              100
-            ],
-            "printScales": [
-              80000,
-              40000,
-              20000,
-              10000,
-              8000,
-              6000,
-              4000,
-              2000,
-              1000,
-              500,
-              250,
-              100
-            ],
-            "printResolutions": [
-              150,
-              300,
-              600
-            ],
-            "sublayers": [
-              {
-                "name": "sede",
-                "title": "sede",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -81.708059,
-                    -4.202718,
-                    -69.868693,
-                    12.678796
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "lagunas_artificiales",
-                "title": "lagunas_artificiales",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745795,
-                    7.013648,
-                    -70.742588,
-                    7.015526
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "cultivo",
-                "title": "cultivo",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.743173,
-                    7.008671,
-                    -70.741195,
-                    7.016014
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "granja",
-                "title": "granja",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.743552,
-                    7.008546,
-                    -70.741141,
-                    7.016115
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "afectacion",
-                "title": "afectacion",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "descripción_dano",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744973,
-                    7.01165,
-                    -70.742937,
-                    7.014289
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "unidad_constructiva",
-                "title": "unidad_constructiva",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745027,
-                    7.009434,
-                    -70.742172,
-                    7.014351
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "edificio",
-                "title": "edificio",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745062,
-                    7.011578,
-                    -70.74297,
-                    7.014351
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "elementos_const",
-                "title": "elementos_const",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745018,
-                    7.011236,
-                    -70.742364,
-                    7.014292
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "energia_transformador",
-                "title": "energia_transformador",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre_marca",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744816,
-                    7.011954,
-                    -70.743251,
-                    7.014355
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "energia_poste",
-                "title": "energia_poste",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745257,
-                    7.011954,
-                    -70.743236,
-                    7.014357
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "energia_nodo",
-                "title": "energia_nodo",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745256,
-                    7.010586,
-                    -70.741334,
-                    7.01556
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "energia_linea",
-                "title": "energia_linea",
-                "geometryType": "LineString",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745254,
-                    7.010978,
-                    -70.741334,
-                    7.01556
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "redes_planta",
-                "title": "redes_planta",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744181,
-                    7.011582,
-                    -70.743951,
-                    7.013791
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "alcantarillado_tramo",
-                "title": "alcantarillado_tramo",
-                "geometryType": "LineString",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744868,
-                    7.011701,
-                    -70.743021,
-                    7.01374
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "alcantarillado_nodo",
-                "title": "alcantarillado_nodo",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745256,
-                    7.010586,
-                    -70.741334,
-                    7.01556
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "contenedor_residuos",
-                "title": "contenedor_residuos",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "material_f",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744882,
-                    7.01184,
-                    -70.743251,
-                    7.014236
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "acueducto_tramo",
-                "title": "acueducto_tramo",
-                "geometryType": "MultiLineString",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744915,
-                    7.011695,
-                    -70.743185,
-                    7.014262
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "acueducto_captacion",
-                "title": "acueducto_captacion",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744523,
-                    7.010396,
-                    -70.74136,
-                    7.015414
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "acueducto_nodo",
-                "title": "acueducto_nodo",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.744921,
-                    7.010396,
-                    -70.74136,
-                    7.015416
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "parqueadero",
-                "title": "parqueadero",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.7451,
-                    7.012715,
-                    -70.744302,
-                    7.014022
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "cancha",
-                "title": "cancha",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.743914,
-                    7.012063,
-                    -70.743611,
-                    7.012285
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "flora",
-                "title": "flora",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "objectid",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -71.08965,
-                    6.574944,
-                    -69.964986,
-                    7.091737
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "fauna",
-                "title": "fauna",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -71.169166,
-                    6.529557,
-                    -69.789753,
-                    7.104184
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "zona",
-                "title": "zona",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.746338,
-                    7.006497,
-                    -70.739843,
-                    7.016528
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "drenaje",
-                "title": "drenaje",
-                "geometryType": "MultiLineString",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -71.209612,
-                    6.49328,
-                    -69.762373,
-                    7.094034
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "arbol",
-                "title": "arbol",
-                "geometryType": "Point",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "nombre_com",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.746334,
-                    7.008041,
-                    -70.739906,
-                    7.016461
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "via_interna",
-                "title": "via_interna",
-                "geometryType": "MultiPolygon",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "categoria",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.745417,
-                    7.011555,
-                    -70.743514,
-                    7.014375
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "sendero",
-                "title": "sendero",
-                "geometryType": "LineString",
-                "visibility": true,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.743543,
-                    7.009461,
-                    -70.742062,
-                    7.014731
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "areas_protegidas",
-                "title": "areas_protegidas",
-                "geometryType": "MultiPolygon",
-                "visibility": false,
-                "queryable": true,
-                "displayField": "ap_nombre",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.920528,
-                    6.49543,
-                    -69.759831,
-                    6.827971
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "coberturas",
-                "title": "coberturas",
-                "geometryType": "MultiPolygon",
-                "visibility": false,
-                "queryable": true,
-                "displayField": "OBJECTID",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -70.746385,
-                    7.00654,
-                    -70.739721,
-                    7.016535
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "suelos",
-                "title": "suelos",
-                "geometryType": "MultiPolygon",
-                "visibility": false,
-                "queryable": true,
-                "displayField": "OBJECTID_1",
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -71.209659,
-                    6.480026,
-                    -69.757789,
-                    7.106685
-                  ]
-                },
-                "dimensions": []
-              },
-              {
-                "name": "OpenStreetMap",
-                "title": "OpenStreetMap",
-                "visibility": true,
-                "queryable": true,
-                "opacity": 255,
-                "styles": {
-                  "predeterminado": "predeterminado"
-                },
-                "style": "predeterminado",
-                "bbox": {
-                  "crs": "EPSG:4326",
-                  "bounds": [
-                    -180,
-                    -85.051129,
-                    180,
-                    85.051129
-                  ]
-                },
-                "dimensions": []
-              }
-            ],
-            "expanded": true,
-            "externalLayers": [],
-            "backgroundLayers": [
-              {
-                "name": "mapnik",
-                "visibility": true
-              },
-              {
-                "name": "StamenToner"
-              }
-            ],
-            "searchProviders": [
-              {
-                "key": "lotesearch",
-                "params": {
-                  "url": "http://146.148.65.245:8400/consulta/lote"
-                }
-              }
-            ],
-            "additionalMouseCrs": [
-              "EPSG:3857"
-            ],
-            "mapCrs": "EPSG:4326",
-            "drawingOrder": [
-              "OpenStreetMap",
-              "suelos",
-              "coberturas",
-              "areas_protegidas",
-              "sendero",
-              "via_interna",
-              "arbol",
-              "drenaje",
-              "zona",
-              "fauna",
-              "flora",
-              "cancha",
-              "parqueadero",
-              "acueducto_nodo",
-              "acueducto_captacion",
-              "acueducto_tramo",
-              "contenedor_residuos",
-              "alcantarillado_nodo",
-              "alcantarillado_tramo",
-              "redes_planta",
-              "energia_linea",
-              "energia_nodo",
-              "energia_poste",
-              "energia_transformador",
-              "elementos_const",
-              "edificio",
-              "unidad_constructiva",
-              "afectacion",
-              "granja",
-              "cultivo",
-              "lagunas_artificiales",
-              "sede"
-            ],
-            "legendUrl": "http://146.148.65.245:8080/?",
-            "featureInfoUrl": "http://146.148.65.245:8080/?",
-            "printUrl": "http://146.148.65.245:8080/?",
-            "editConfig": null,
-            "thumbnail": "img/genmapthumbs/146.148.65.245:8080.png"
-          }
-        ],
-        "defaultTheme": "146.148.65.245:8080",
-        "defaultMapCrs": "EPSG:3857",
-        "defaultBackgroundLayers": [],
-        "externalLayers": [
-          {
-            "name": "bauzonen",
-            "type": "wms",
-            "tiled": true,
-            "url": "https://wms.geo.admin.ch",
-            "params": {
-              "LAYERS": "ch.are.bauzonen"
-            },
-            "infoFormats": [
-              "text/plain"
+            "OnlineResource": ""
+          },
+          "abstract": "",
+          "keywords": "",
+          "onlineResource": "http://146.148.65.245:8080/",
+          "contact": {
+            "person": "",
+            "organization": "",
+            "position": "",
+            "phone": "",
+            "email": ""
+          },
+          "availableFormats": [
+            "image/jpeg",
+            "image/png",
+            "image/png; mode=16bit",
+            "image/png; mode=8bit",
+            "image/png; mode=1bit",
+            "application/dxf",
+            "application/pdf"
+          ],
+          "version": "1.3.0",
+          "infoFormats": [
+            "text/plain",
+            "text/html",
+            "text/xml",
+            "application/vnd.ogc.gml",
+            "application/vnd.ogc.gml/3.1.1",
+            "application/json",
+            "application/geo+json"
+          ],
+          "bbox": {
+            "crs": "EPSG:4326",
+            "bounds": [
+              -180,
+              -85.051129,
+              180,
+              85.051129
             ]
-          }
-        ],
-        "themeInfoLinks": [
-          {
-            "name": "example_link",
-            "title": "Example link",
-            "url": "https://example.com",
-            "target": "mydialogname"
           },
-          {
-            "name": "example_link2",
-            "title": "Example link 2",
-            "url": "https://example.com/",
-            "target": "_blank"
-          }
-        ],
-        "backgroundLayers": [
-          {
-            "name": "mapnik",
-            "title": "Open Street Map",
-            "type": "osm",
-            "source": "osm",
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {
-                "Title": "OpenStreetMap contributors",
-                "OnlineResource": "https://www.openstreetmap.org/copyright"
-              }
-            }
+          "initialBbox": {
+            "crs": "EPSG:4326",
+            "bounds": [
+              -180,
+              -85.051129,
+              180,
+              85.051129
+            ]
           },
-          {
-            "name": "Night2012",
-            "title": "NASAGIBS Night 2012",
-            "type": "tileprovider",
-            "source": "nasagibs",
-            "provider": "NASAGIBS.ViirsEarthAtNight2012",
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {
-                "Title": "Suomi NPP / VIIRS via NASA Earth Observatory"
-              }
-            }
-          },
-          {
-            "name": "StamenWatercolor",
-            "title": "Stamen Watercolor/OSM",
-            "group": "stamen",
-            "type": "tileprovider",
-            "source": "stamen",
-            "provider": "Stamen.Watercolor",
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
-          },
-          {
-            "name": "StamenToner",
-            "title": "Stamen Toner/OSM",
-            "group": "stamen",
-            "type": "tileprovider",
-            "source": "stamen",
-            "provider": "Stamen.Toner",
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
-          },
-          {
-            "name": "group",
-            "title": "Group",
-            "type": "group",
-            "items": [
-              {
-                "ref": "Gemeindegrenzen",
-                "minScale": 10000,
-                "maxScale": 300000
+          "scales": [
+            150000,
+            100000,
+            80000,
+            40000,
+            20000,
+            10000,
+            8000,
+            6000,
+            4000,
+            2000,
+            1000,
+            500,
+            250,
+            100
+          ],
+          "printScales": [
+            80000,
+            40000,
+            20000,
+            10000,
+            8000,
+            6000,
+            4000,
+            2000,
+            1000,
+            500,
+            250,
+            100
+          ],
+          "printResolutions": [
+            150,
+            300,
+            600
+          ],
+          "sublayers": [
+            {
+              "name": "sede",
+              "title": "sede",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
               },
-              {
-                "ref": "oevhaltestellen"
-              }
-            ],
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
-          },
-          {
-            "name": "Gemeindegrenzen",
-            "title": "Gemeindegrenzen",
-            "type": "wms",
-            "url": "http://wms.geo.admin.ch/",
-            "tiled": false,
-            "params": {
-              "LAYERS": "ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill",
-              "STYLES": "default"
-            },
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
-          },
-          {
-            "name": "oevhaltestellen",
-            "title": "Haltestellen öV",
-            "type": "wms",
-            "url": "http://wms.geo.admin.ch/",
-            "tiled": true,
-            "params": {
-              "LAYERS": "ch.bav.haltestellen-oev",
-              "STYLES": "default"
-            },
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
-          },
-          {
-            "type": "wmts",
-            "url": "http://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief/default/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg",
-            "title": "Blue Marble",
-            "name": "bluemarble",
-            "tileMatrixPrefix": "",
-            "tileMatrixSet": "GoogleMapsCompatible_Level8",
-            "originX": -20037508.34278925,
-            "originY": 20037508.34278925,
-            "projection:": "EPSG:3857",
-            "resolutions": [
-              156543.03390625,
-              78271.516953125,
-              39135.7584765625,
-              19567.87923828125,
-              9783.939619140625,
-              4891.9698095703125,
-              2445.9849047851562,
-              1222.9924523925781
-            ],
-            "tileSize": [
-              256,
-              256
-            ],
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {}
-            }
-          },
-          {
-            "type": "wms",
-            "url": "https://maps.omniscale.net/v2/swl-33d96aa8/style.default/map",
-            "title": "osm",
-            "name": "osm",
-            "srs": "EPSG:25832",
-            "params": {
-              "LAYERS": "osm",
-              "STYLES": "",
-              "VERSION": "1.1.1"
-            },
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {}
-            }
-          },
-          {
-            "type": "tileprovider",
-            "provider": "OpenTopoMap",
-            "title": "OpenTopoMap",
-            "name": "opentopomap",
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {
-                "Title": "Map data: &copy; <a href=\"https://openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors, SRTM | Map style: &copy; <a href=\"https://opentopomap.org\" target=\"_blank\">OpenTopoMap</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\">CC-BY-SA</a>)"
-              }
-            }
-          },
-          {
-            "type": "wmts",
-            "url": "https://wxs.ign.fr/pratique/geoportail/wmts",
-            "title": "IGN",
-            "name": "GEOGRAPHICALGRIDSYSTEMS.MAPS",
-            "format": "image/jpeg",
-            "style": "normal",
-            "originX": -20037508,
-            "originY": 20037508,
-            "projection": "EPSG:3857",
-            "resolutions": [
-              156543.03392804097,
-              78271.51696402048,
-              39135.75848201024,
-              19567.87924100512,
-              9783.93962050256,
-              4891.96981025128,
-              2445.98490512564,
-              1222.99245256282,
-              611.49622628141,
-              305.748113140705,
-              152.8740565703525,
-              76.43702828517625,
-              38.21851414258813,
-              19.109257071294063,
-              9.554628535647032,
-              4.777314267823516,
-              2.388657133911758,
-              1.194328566955879
-            ],
-            "tileSize": [
-              256,
-              256
-            ],
-            "requestEncoding": "KVP",
-            "tileMatrixSet": "PM",
-            "tileMatrixPrefix": "",
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {
-                "Title": "<a href=\"http://www.geoportail.fr/\" target=\"_blank\"><img src=\"https://api.ign.fr/geoportail/api/js/latest/theme/geoportal/img/logo_gp.gif\"></a>"
-              }
-            }
-          },
-          {
-            "type": "group",
-            "title": "Karte farbig",
-            "name": "pixelkarte",
-            "items": [
-              {
-                "ref": "av_grundbuchplan-color",
-                "minScale": 0,
-                "maxScale": 2000
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -81.708059,
+                  -4.202718,
+                  -69.868693,
+                  12.678796
+                ]
               },
-              {
-                "ref": "swisstopo.pixelkarte-farbe",
-                "minScale": 2001
+              "dimensions": []
+            },
+            {
+              "name": "lagunas_artificiales",
+              "title": "lagunas_artificiales",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "OBJECTID",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745795,
+                  7.013648,
+                  -70.742588,
+                  7.015526
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "cultivo",
+              "title": "cultivo",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.743173,
+                  7.008671,
+                  -70.741195,
+                  7.016014
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "granja",
+              "title": "granja",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.743552,
+                  7.008546,
+                  -70.741141,
+                  7.016115
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "afectacion",
+              "title": "afectacion",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "descripción_dano",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744973,
+                  7.01165,
+                  -70.742937,
+                  7.014289
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "unidad_constructiva",
+              "title": "unidad_constructiva",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745027,
+                  7.009434,
+                  -70.742172,
+                  7.014351
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "edificio",
+              "title": "edificio",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745062,
+                  7.011578,
+                  -70.74297,
+                  7.014351
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "elementos_const",
+              "title": "elementos_const",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745018,
+                  7.011236,
+                  -70.742364,
+                  7.014292
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "energia_transformador",
+              "title": "energia_transformador",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre_marca",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744816,
+                  7.011954,
+                  -70.743251,
+                  7.014355
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "energia_poste",
+              "title": "energia_poste",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "OBJECTID",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745257,
+                  7.011954,
+                  -70.743236,
+                  7.014357
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "energia_nodo",
+              "title": "energia_nodo",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745256,
+                  7.010586,
+                  -70.741334,
+                  7.01556
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "energia_linea",
+              "title": "energia_linea",
+              "geometryType": "LineString",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "OBJECTID",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745254,
+                  7.010978,
+                  -70.741334,
+                  7.01556
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "redes_planta",
+              "title": "redes_planta",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744181,
+                  7.011582,
+                  -70.743951,
+                  7.013791
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "alcantarillado_tramo",
+              "title": "alcantarillado_tramo",
+              "geometryType": "LineString",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "OBJECTID",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744868,
+                  7.011701,
+                  -70.743021,
+                  7.01374
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "alcantarillado_nodo",
+              "title": "alcantarillado_nodo",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745256,
+                  7.010586,
+                  -70.741334,
+                  7.01556
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "contenedor_residuos",
+              "title": "contenedor_residuos",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "material_f",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744882,
+                  7.01184,
+                  -70.743251,
+                  7.014236
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "acueducto_tramo",
+              "title": "acueducto_tramo",
+              "geometryType": "MultiLineString",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "OBJECTID",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744915,
+                  7.011695,
+                  -70.743185,
+                  7.014262
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "acueducto_captacion",
+              "title": "acueducto_captacion",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744523,
+                  7.010396,
+                  -70.74136,
+                  7.015414
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "acueducto_nodo",
+              "title": "acueducto_nodo",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.744921,
+                  7.010396,
+                  -70.74136,
+                  7.015416
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "parqueadero",
+              "title": "parqueadero",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.7451,
+                  7.012715,
+                  -70.744302,
+                  7.014022
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "cancha",
+              "title": "cancha",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.743914,
+                  7.012063,
+                  -70.743611,
+                  7.012285
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "flora",
+              "title": "flora",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -71.08965,
+                  6.574944,
+                  -69.964986,
+                  7.091737
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "fauna",
+              "title": "fauna",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -71.169166,
+                  6.529557,
+                  -69.789753,
+                  7.104184
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "zona",
+              "title": "zona",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.746338,
+                  7.006497,
+                  -70.739843,
+                  7.016528
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "drenaje",
+              "title": "drenaje",
+              "geometryType": "MultiLineString",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -71.209612,
+                  6.49328,
+                  -69.762373,
+                  7.094034
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "arbol",
+              "title": "arbol",
+              "geometryType": "Point",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "nombre_com",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.746334,
+                  7.008041,
+                  -70.739906,
+                  7.016461
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "via_interna",
+              "title": "via_interna",
+              "geometryType": "MultiPolygon",
+              "visibility": true,
+              "queryable": true,
+              "displayField": "categoria",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.745417,
+                  7.011555,
+                  -70.743514,
+                  7.014375
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "sendero",
+              "title": "sendero",
+              "geometryType": "LineString",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.743543,
+                  7.009461,
+                  -70.742062,
+                  7.014731
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "areas_protegidas",
+              "title": "areas_protegidas",
+              "geometryType": "MultiPolygon",
+              "visibility": false,
+              "queryable": true,
+              "displayField": "ap_nombre",
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.920528,
+                  6.49543,
+                  -69.759831,
+                  6.827971
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "coberturas",
+              "title": "coberturas",
+              "geometryType": "MultiPolygon",
+              "visibility": false,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -70.746385,
+                  7.00654,
+                  -70.739721,
+                  7.016535
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "suelos",
+              "title": "suelos",
+              "geometryType": "MultiPolygon",
+              "visibility": false,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -71.209659,
+                  6.480026,
+                  -69.757789,
+                  7.106685
+                ]
+              },
+              "dimensions": []
+            },
+            {
+              "name": "OpenStreetMap",
+              "title": "OpenStreetMap",
+              "visibility": true,
+              "queryable": true,
+              "opacity": 255,
+              "styles": {
+                "predeterminado": "predeterminado"
+              },
+              "style": "predeterminado",
+              "bbox": {
+                "crs": "EPSG:4326",
+                "bounds": [
+                  -180,
+                  -85.051129,
+                  180,
+                  85.051129
+                ]
+              },
+              "dimensions": []
+            }
+          ],
+          "expanded": true,
+          "externalLayers": [],
+          "backgroundLayers": [
+            {
+              "name": "mapnik",
+              "visibility": true
+            },
+            {
+              "name": "StamenToner"
+            }
+          ],
+          "searchProviders": [
+            {
+              "key": "lotesearch",
+              "params": {
+                "url": "http://146.148.65.245:8400/consulta/lote"
               }
-            ],
-            "thumbnail": "img/mapthumbs/default.jpg",
-            "attribution": {
-              "Title": {}
+            }
+          ],
+          "additionalMouseCrs": [
+            "EPSG:3857"
+          ],
+          "mapCrs": "EPSG:4326",
+          "extent": [   -70.758872796,
+          7.004419920,
+          -70.729930525,
+          7.019297933],
+          "drawingOrder": [
+            "suelos",
+            "coberturas",
+            "areas_protegidas",
+            "sendero",
+            "via_interna",
+            "arbol",
+            "drenaje",
+            "zona",
+            "fauna",
+            "flora",
+            "cancha",
+            "parqueadero",
+            "acueducto_nodo",
+            "acueducto_captacion",
+            "acueducto_tramo",
+            "contenedor_residuos",
+            "alcantarillado_nodo",
+            "alcantarillado_tramo",
+            "redes_planta",
+            "energia_linea",
+            "energia_nodo",
+            "energia_poste",
+            "energia_transformador",
+            "elementos_const",
+            "edificio",
+            "unidad_constructiva",
+            "afectacion",
+            "granja",
+            "cultivo",
+            "lagunas_artificiales",
+            "sede"
+          ],
+          "legendUrl": "http://146.148.65.245:8080/?",
+          "featureInfoUrl": "http://146.148.65.245:8080/?",
+          "printUrl": "http://146.148.65.245:8080/?",
+          "editConfig": null,
+          "thumbnail": "img/mapthumbs/sig_orinoquia.png"
+        }
+      ],
+      "defaultTheme": "146.148.65.245:8080",
+      "defaultMapCrs": "EPSG:4326",
+      "defaultBackgroundLayers": [],
+      "externalLayers": [
+        {
+          "name": "bauzonen",
+          "type": "wms",
+          "tiled": true,
+          "url": "https://wms.geo.admin.ch",
+          "params": {
+            "LAYERS": "ch.are.bauzonen"
+          },
+          "infoFormats": [
+            "text/plain"
+          ]
+        }
+      ],
+      "themeInfoLinks": [
+        {
+          "name": "example_link",
+          "title": "Example link",
+          "url": "https://example.com",
+          "target": "mydialogname"
+        },
+        {
+          "name": "example_link2",
+          "title": "Example link 2",
+          "url": "https://example.com/",
+          "target": "_blank"
+        }
+      ],
+      "backgroundLayers": [
+        {
+          "name": "mapnik",
+          "title": "Open Street Map",
+          "type": "osm",
+          "source": "osm",
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {
+              "Title": "OpenStreetMap contributors",
+              "OnlineResource": "https://www.openstreetmap.org/copyright"
+            }
+          }
+        },
+        {
+          "name": "Night2012",
+          "title": "NASAGIBS Night 2012",
+          "type": "tileprovider",
+          "source": "nasagibs",
+          "provider": "NASAGIBS.ViirsEarthAtNight2012",
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {
+              "Title": "Suomi NPP / VIIRS via NASA Earth Observatory"
+            }
+          }
+        },
+        {
+          "name": "StamenWatercolor",
+          "title": "Stamen Watercolor/OSM",
+          "group": "stamen",
+          "type": "tileprovider",
+          "source": "stamen",
+          "provider": "Stamen.Watercolor",
+          "attribution": {
+            "Title": {}
+          },
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "name": "StamenToner",
+          "title": "Stamen Toner/OSM",
+          "group": "stamen",
+          "type": "tileprovider",
+          "source": "stamen",
+          "provider": "Stamen.Toner",
+          "attribution": {
+            "Title": {}
+          },
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "name": "group",
+          "title": "Group",
+          "type": "group",
+          "items": [
+            {
+              "ref": "Gemeindegrenzen",
+              "minScale": 10000,
+              "maxScale": 300000
+            },
+            {
+              "ref": "oevhaltestellen"
+            }
+          ],
+          "attribution": {
+            "Title": {}
+          },
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "name": "Gemeindegrenzen",
+          "title": "Gemeindegrenzen",
+          "type": "wms",
+          "url": "http://wms.geo.admin.ch/",
+          "tiled": false,
+          "params": {
+            "LAYERS": "ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill",
+            "STYLES": "default"
+          },
+          "attribution": {
+            "Title": {}
+          },
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "name": "oevhaltestellen",
+          "title": "Haltestellen öV",
+          "type": "wms",
+          "url": "http://wms.geo.admin.ch/",
+          "tiled": true,
+          "params": {
+            "LAYERS": "ch.bav.haltestellen-oev",
+            "STYLES": "default"
+          },
+          "attribution": {
+            "Title": {}
+          },
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "type": "wmts",
+          "url": "http://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief/default/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg",
+          "title": "Blue Marble",
+          "name": "bluemarble",
+          "tileMatrixPrefix": "",
+          "tileMatrixSet": "GoogleMapsCompatible_Level8",
+          "originX": -20037508.34278925,
+          "originY": 20037508.34278925,
+          "projection:": "EPSG:3857",
+          "resolutions": [
+            156543.03390625,
+            78271.516953125,
+            39135.7584765625,
+            19567.87923828125,
+            9783.939619140625,
+            4891.9698095703125,
+            2445.9849047851562,
+            1222.9924523925781
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {}
+          }
+        },
+        {
+          "type": "wms",
+          "url": "https://maps.omniscale.net/v2/swl-33d96aa8/style.default/map",
+          "title": "osm",
+          "name": "osm",
+          "srs": "EPSG:25832",
+          "params": {
+            "LAYERS": "osm",
+            "STYLES": "",
+            "VERSION": "1.1.1"
+          },
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {}
+          }
+        },
+        {
+          "type": "tileprovider",
+          "provider": "OpenTopoMap",
+          "title": "OpenTopoMap",
+          "name": "opentopomap",
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {
+              "Title": "Map data: &copy; <a href=\"https://openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap</a> contributors, SRTM | Map style: &copy; <a href=\"https://opentopomap.org\" target=\"_blank\">OpenTopoMap</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\">CC-BY-SA</a>)"
+            }
+          }
+        },
+        {
+          "type": "wmts",
+          "url": "https://wxs.ign.fr/pratique/geoportail/wmts",
+          "title": "IGN",
+          "name": "GEOGRAPHICALGRIDSYSTEMS.MAPS",
+          "format": "image/jpeg",
+          "style": "normal",
+          "originX": -20037508,
+          "originY": 20037508,
+          "projection": "EPSG:3857",
+          "resolutions": [
+            156543.03392804097,
+            78271.51696402048,
+            39135.75848201024,
+            19567.87924100512,
+            9783.93962050256,
+            4891.96981025128,
+            2445.98490512564,
+            1222.99245256282,
+            611.49622628141,
+            305.748113140705,
+            152.8740565703525,
+            76.43702828517625,
+            38.21851414258813,
+            19.109257071294063,
+            9.554628535647032,
+            4.777314267823516,
+            2.388657133911758,
+            1.194328566955879
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "requestEncoding": "KVP",
+          "tileMatrixSet": "PM",
+          "tileMatrixPrefix": "",
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {
+              "Title": "<a href=\"http://www.geoportail.fr/\" target=\"_blank\"><img src=\"https://api.ign.fr/geoportail/api/js/latest/theme/geoportal/img/logo_gp.gif\"></a>"
+            }
+          }
+        },
+        {
+          "type": "group",
+          "title": "Karte farbig",
+          "name": "pixelkarte",
+          "items": [
+            {
+              "ref": "av_grundbuchplan-color",
+              "minScale": 0,
+              "maxScale": 2000
+            },
+            {
+              "ref": "swisstopo.pixelkarte-farbe",
+              "minScale": 2001
+            }
+          ],
+          "thumbnail": "img/mapthumbs/default.jpg",
+          "attribution": {
+            "Title": {}
+          }
+        },
+        {
+          "type": "wmts",
+          "url": "https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/2056/{TileMatrix}/{TileCol}/{TileRow}.jpeg",
+          "title": "swisstopo.pixelkarte-farbe",
+          "name": "swisstopo.pixelkarte-farbe",
+          "tileMatrixPrefix": "",
+          "tileMatrixSet": "2056_26",
+          "originX": 2420000,
+          "originY": 1350000,
+          "projection:": "EPSG:2056",
+          "resolutions": [
+            4000,
+            3750,
+            3500,
+            3250,
+            3000,
+            2750,
+            2500,
+            2250,
+            2000,
+            1750,
+            1500,
+            1250,
+            1000,
+            750,
+            650,
+            500,
+            250,
+            100,
+            50,
+            20,
+            10,
+            5,
+            2.5,
+            2,
+            1.5,
+            1,
+            0.5,
+            0.25
+          ],
+          "tileSize": [
+            256,
+            256
+          ],
+          "attribution": {
+            "Title": {
+              "Title": {
+                "Title": "Hintergrundkarte &copy; <a href=\"https://www.swisstopo.ch\" target=\"_blank\">swisstopo</a>"
+              }
             }
           },
-          {
-            "type": "wmts",
-            "url": "https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/2056/{TileMatrix}/{TileCol}/{TileRow}.jpeg",
-            "title": "swisstopo.pixelkarte-farbe",
-            "name": "swisstopo.pixelkarte-farbe",
-            "tileMatrixPrefix": "",
-            "tileMatrixSet": "2056_26",
-            "originX": 2420000,
-            "originY": 1350000,
-            "projection:": "EPSG:2056",
-            "resolutions": [
-              4000,
-              3750,
-              3500,
-              3250,
-              3000,
-              2750,
-              2500,
-              2250,
-              2000,
-              1750,
-              1500,
-              1250,
-              1000,
-              750,
-              650,
-              500,
-              250,
-              100,
-              50,
-              20,
-              10,
-              5,
-              2.5,
-              2,
-              1.5,
-              1,
-              0.5,
-              0.25
-            ],
-            "tileSize": [
-              256,
-              256
-            ],
-            "attribution": {
-              "Title": {
-                "Title": {
-                  "Title": "Hintergrundkarte &copy; <a href=\"https://www.swisstopo.ch\" target=\"_blank\">swisstopo</a>"
-                }
-              }
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "type": "wms",
+          "name": "av_grundbuchplan-color",
+          "title": "av_grundbuchplan-color",
+          "url": "https://iap-map.gl.ch/ows/mainmap",
+          "params": {
+            "LAYERS": "ch.gl.cadastre.av_grundbuchplan-color",
+            "STYLES": "default"
           },
-          {
-            "type": "wms",
-            "name": "av_grundbuchplan-color",
-            "title": "av_grundbuchplan-color",
-            "url": "https://iap-map.gl.ch/ows/mainmap",
-            "params": {
-              "LAYERS": "ch.gl.cadastre.av_grundbuchplan-color",
-              "STYLES": "default"
-            },
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
+          "attribution": {
+            "Title": {}
           },
-          {
-            "name": "luftbild_zh_2015",
-            "title": "Luftbild ZH 2015",
-            "type": "wms",
-            "url": "http://localhost/qgis/qgis_mapserv.fcgi",
-            "params": {
-              "LAYERS": "Orthofoto_2015_stdzh_0.5_jpeg",
-              "STYLES": "default",
-              "VERSION": "1.3.0",
-              "MAP": "/home/sandro/wms/luftbild_zh.qgs"
-            },
-            "attribution": {
-              "Title": {}
-            },
-            "thumbnail": "img/mapthumbs/default.jpg"
-          }
-        ]
-      }
-  }
+          "thumbnail": "img/mapthumbs/default.jpg"
+        },
+        {
+          "name": "luftbild_zh_2015",
+          "title": "Luftbild ZH 2015",
+          "type": "wms",
+          "url": "http://localhost/qgis/qgis_mapserv.fcgi",
+          "params": {
+            "LAYERS": "Orthofoto_2015_stdzh_0.5_jpeg",
+            "STYLES": "default",
+            "VERSION": "1.3.0",
+            "MAP": "/home/sandro/wms/luftbild_zh.qgs"
+          },
+          "attribution": {
+            "Title": {}
+          },
+          "thumbnail": "img/mapthumbs/default.jpg"
+        }
+      ]
+    }
+}
