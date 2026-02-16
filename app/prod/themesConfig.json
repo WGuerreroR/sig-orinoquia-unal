@@ -10,8 +10,8 @@
       "subdirs": [],
       "items": [
         {
-          "url": "http://146.148.65.245:8080",
-          "id": "146.148.65.245:8080",
+          "url": "http://136.113.129.29:8080",
+          "id": "136.113.129.29:8080",
           "title": "Sede Orinoquía",
           "description": "",
           "attribution": {
@@ -23,7 +23,7 @@
           },
           "abstract": "",
           "keywords": "",
-          "onlineResource": "http://146.148.65.245:8080/",
+          "onlineResource": "http://136.113.129.29:8080/",
           "contact": {
             "person": "",
             "organization": "",
@@ -826,7 +826,7 @@
             {
               "key": "lotesearch",
               "params": {
-                "url": "http://146.148.65.245:8400/consulta/lote"
+                "url": "http://136.113.129.29:8400/consulta/lote"
               }
             }
           ],
@@ -871,14 +871,14 @@
             "lagunas_artificiales",
             "sede"
           ],
-          "legendUrl": "http://146.148.65.245:8080/?",
-          "featureInfoUrl": "http://146.148.65.245:8080/?",
-          "printUrl": "http://146.148.65.245:8080/?",
+          "legendUrl": "http://136.113.129.29:8080/?",
+          "featureInfoUrl": "http://136.113.129.29:8080/?",
+          "printUrl": "http://136.113.129.29:8080/?",
           "editConfig": null,
           "thumbnail": "img/mapthumbs/sig_orinoquia.png"
         }
       ],
-      "defaultTheme": "146.148.65.245:8080",
+      "defaultTheme": "136.113.129.29:8080",
       "defaultMapCrs": "EPSG:4326",
       "defaultBackgroundLayers": [],
       "externalLayers": [

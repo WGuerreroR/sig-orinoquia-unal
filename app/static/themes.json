@@ -4,8 +4,8 @@
     "subdirs": [],
     "items": [
       {
-        "url": "http://146.148.65.245:8080",
-        "id": "146.148.65.245:8080",
+        "url": "http://136.113.129.29:8080",
+        "id": "136.113.129.29:8080",
         "title": "Sede Orinoquía",
         "description": "",
         "attribution": {
@@ -20,7 +20,7 @@
         },
         "abstract": "",
         "keywords": "",
-        "onlineResource": "http://146.148.65.245:8080/",
+        "onlineResource": "http://136.113.129.29:8080/",
         "contact": {
           "person": "",
           "organization": "",
@@ -50,10 +50,10 @@
         "bbox": {
           "crs": "EPSG:4326",
           "bounds": [
-            -180,
-            -85.051129,
-            180,
-            85.051129
+            -114.780945,
+            -10.581891,
+            -69.757789,
+            12.678796
           ]
         },
         "initialBbox": {
@@ -102,190 +102,6 @@
         ],
         "sublayers": [
           {
-            "name": "sede",
-            "title": "sede",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -81.708059,
-                -4.202718,
-                -69.868693,
-                12.678796
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "lagunas_artificiales",
-            "title": "lagunas_artificiales",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.745795,
-                7.013648,
-                -70.742588,
-                7.015526
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "cultivo",
-            "title": "cultivo",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.743173,
-                7.008671,
-                -70.741195,
-                7.016014
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "granja",
-            "title": "granja",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.743552,
-                7.008546,
-                -70.741141,
-                7.016115
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "afectacion",
-            "title": "afectacion",
-            "geometryType": "Point",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "descripción_dano",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.744973,
-                7.01165,
-                -70.742937,
-                7.014289
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "unidad_constructiva",
-            "title": "unidad_constructiva",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.745027,
-                7.009434,
-                -70.742172,
-                7.014351
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "edificio",
-            "title": "edificio",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.745062,
-                7.011578,
-                -70.74297,
-                7.014351
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "elementos_const",
-            "title": "elementos_const",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.745018,
-                7.011236,
-                -70.742364,
-                7.014292
-              ]
-            },
-            "dimensions": []
-          },
-          {
             "name": "energia_transformador",
             "title": "energia_transformador",
             "geometryType": "Point",
@@ -309,12 +125,173 @@
             "dimensions": []
           },
           {
+            "name": "alcantarillado_nodo",
+            "title": "alcantarillado_nodo",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.745063,
+                7.011701,
+                -70.74302,
+                7.014071
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "afectacion",
+            "title": "afectacion",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "descripcion_dano",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.744973,
+                7.01165,
+                -70.742937,
+                7.014289
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "acueducto_valvula",
+            "title": "acueducto_valvula",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre_marca",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -114.780945,
+                -10.581891,
+                -114.7808,
+                -10.581737
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "acueducto_nodo",
+            "title": "acueducto_nodo",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.744921,
+                7.010396,
+                -70.74136,
+                7.015416
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "acueducto_medidor",
+            "title": "acueducto_medidor",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre_marca",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -114.780945,
+                -10.581891,
+                -114.7808,
+                -10.581737
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "acueducto_hidrante",
+            "title": "acueducto_hidrante",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre_marca",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -114.780945,
+                -10.581891,
+                -114.7808,
+                -10.581737
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "acueducto_captacion",
+            "title": "acueducto_captacion",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.744523,
+                7.010396,
+                -70.74136,
+                7.015414
+              ]
+            },
+            "dimensions": []
+          },
+          {
             "name": "energia_poste",
             "title": "energia_poste",
             "geometryType": "Point",
             "visibility": true,
             "queryable": true,
-            "displayField": "OBJECTID",
+            "displayField": "codigo",
             "opacity": 255,
             "styles": {
               "predeterminado": "predeterminado"
@@ -355,81 +332,12 @@
             "dimensions": []
           },
           {
-            "name": "energia_linea",
-            "title": "energia_linea",
-            "geometryType": "LineString",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.745254,
-                7.010978,
-                -70.741334,
-                7.01556
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "redes_planta",
-            "title": "redes_planta",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.744181,
-                7.011582,
-                -70.743951,
-                7.013791
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "alcantarillado_tramo",
-            "title": "alcantarillado_tramo",
-            "geometryType": "LineString",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.744868,
-                7.011701,
-                -70.743021,
-                7.01374
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "alcantarillado_nodo",
-            "title": "alcantarillado_nodo",
+            "name": "flora",
+            "title": "flora",
             "geometryType": "Point",
             "visibility": true,
             "queryable": true,
-            "displayField": "nombre",
+            "displayField": "kingdom",
             "opacity": 255,
             "styles": {
               "predeterminado": "predeterminado"
@@ -438,10 +346,10 @@
             "bbox": {
               "crs": "EPSG:4326",
               "bounds": [
-                -70.745256,
-                7.010586,
-                -70.741334,
-                7.01556
+                -71.08965,
+                6.574944,
+                -69.964986,
+                7.091737
               ]
             },
             "dimensions": []
@@ -470,144 +378,6 @@
             "dimensions": []
           },
           {
-            "name": "acueducto_tramo",
-            "title": "acueducto_tramo",
-            "geometryType": "MultiLineString",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.744915,
-                7.011695,
-                -70.743185,
-                7.014262
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "acueducto_captacion",
-            "title": "acueducto_captacion",
-            "geometryType": "Point",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.744523,
-                7.010396,
-                -70.74136,
-                7.015414
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "acueducto_nodo",
-            "title": "acueducto_nodo",
-            "geometryType": "Point",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.744921,
-                7.010396,
-                -70.74136,
-                7.015416
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "parqueadero",
-            "title": "parqueadero",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.7451,
-                7.012715,
-                -70.744302,
-                7.014022
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "cancha",
-            "title": "cancha",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.743914,
-                7.012063,
-                -70.743611,
-                7.012285
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "flora",
-            "title": "flora",
-            "geometryType": "Point",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "objectid",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -71.08965,
-                6.574944,
-                -69.964986,
-                7.091737
-              ]
-            },
-            "dimensions": []
-          },
-          {
             "name": "fauna",
             "title": "fauna",
             "geometryType": "Point",
@@ -626,52 +396,6 @@
                 6.529557,
                 -69.789753,
                 7.104184
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "zona",
-            "title": "zona",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.746338,
-                7.006497,
-                -70.739843,
-                7.016528
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "drenaje",
-            "title": "drenaje",
-            "geometryType": "MultiLineString",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -71.209612,
-                6.49328,
-                -69.762373,
-                7.094034
               ]
             },
             "dimensions": []
@@ -700,6 +424,374 @@
             "dimensions": []
           },
           {
+            "name": "senal_e",
+            "title": "senal_e",
+            "geometryType": "Point",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -114.780945,
+                -10.581891,
+                -114.7808,
+                -10.581737
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "alcantarillado_tramo",
+            "title": "alcantarillado_tramo",
+            "geometryType": "LineString",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "codigo",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.744868,
+                7.011701,
+                -70.743021,
+                7.01374
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "acueducto_tramo",
+            "title": "acueducto_tramo",
+            "geometryType": "MultiLineString",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "codigo",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.744915,
+                7.011695,
+                -70.743185,
+                7.014262
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "energia_linea",
+            "title": "energia_linea",
+            "geometryType": "LineString",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "codigo",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.745254,
+                7.010978,
+                -70.741334,
+                7.01556
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "drenaje",
+            "title": "drenaje",
+            "geometryType": "MultiLineString",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -71.209612,
+                6.49328,
+                -69.762373,
+                7.094034
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "sendero",
+            "title": "sendero",
+            "geometryType": "LineString",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "id_sendero",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.743543,
+                7.009461,
+                -70.742062,
+                7.014731
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "unidad_constructiva",
+            "title": "unidad_constructiva",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.745027,
+                7.009434,
+                -70.742172,
+                7.014351
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "redes_planta",
+            "title": "redes_planta",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.744181,
+                7.011582,
+                -70.743951,
+                7.013791
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "cancha",
+            "title": "cancha",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "tipo",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.743914,
+                7.012063,
+                -70.743611,
+                7.012285
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "granja",
+            "title": "granja",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.743552,
+                7.008546,
+                -70.741141,
+                7.016115
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "elementos_const",
+            "title": "elementos_const",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.745018,
+                7.011236,
+                -70.742364,
+                7.014292
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "edificio",
+            "title": "edificio",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.745062,
+                7.011578,
+                -70.74297,
+                7.014351
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "cultivo",
+            "title": "cultivo",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.743173,
+                7.008671,
+                -70.741195,
+                7.016014
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "parqueadero",
+            "title": "parqueadero",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "tipo",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.7451,
+                7.012715,
+                -70.744302,
+                7.014022
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "zona",
+            "title": "zona",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "observacion",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.746338,
+                7.006497,
+                -70.739843,
+                7.016528
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "lagunas_artificiales",
+            "title": "lagunas_artificiales",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "id_laguna",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.745795,
+                7.013648,
+                -70.742588,
+                7.015526
+              ]
+            },
+            "dimensions": []
+          },
+          {
             "name": "via_interna",
             "title": "via_interna",
             "geometryType": "MultiPolygon",
@@ -723,12 +815,12 @@
             "dimensions": []
           },
           {
-            "name": "sendero",
-            "title": "sendero",
-            "geometryType": "LineString",
+            "name": "anden",
+            "title": "anden",
+            "geometryType": "Polygon",
             "visibility": true,
             "queryable": true,
-            "displayField": "OBJECTID",
+            "displayField": "id_anden",
             "opacity": 255,
             "styles": {
               "predeterminado": "predeterminado"
@@ -737,10 +829,56 @@
             "bbox": {
               "crs": "EPSG:4326",
               "bounds": [
-                -70.743543,
-                7.009461,
-                -70.742062,
-                7.014731
+                -114.780945,
+                -10.581891,
+                -114.7808,
+                -10.581737
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "sede",
+            "title": "sede",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "nombre",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -81.708059,
+                -4.202718,
+                -69.868693,
+                12.678796
+              ]
+            },
+            "dimensions": []
+          },
+          {
+            "name": "cobertura",
+            "title": "cobertura",
+            "geometryType": "MultiPolygon",
+            "visibility": true,
+            "queryable": true,
+            "displayField": "coberturas",
+            "opacity": 255,
+            "styles": {
+              "predeterminado": "predeterminado"
+            },
+            "style": "predeterminado",
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                -70.746385,
+                7.00654,
+                -70.739721,
+                7.016535
               ]
             },
             "dimensions": []
@@ -749,7 +887,7 @@
             "name": "areas_protegidas",
             "title": "areas_protegidas",
             "geometryType": "MultiPolygon",
-            "visibility": false,
+            "visibility": true,
             "queryable": true,
             "displayField": "ap_nombre",
             "opacity": 255,
@@ -769,35 +907,12 @@
             "dimensions": []
           },
           {
-            "name": "coberturas",
-            "title": "coberturas",
-            "geometryType": "MultiPolygon",
-            "visibility": false,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.746385,
-                7.00654,
-                -70.739721,
-                7.016535
-              ]
-            },
-            "dimensions": []
-          },
-          {
             "name": "suelos",
             "title": "suelos",
             "geometryType": "MultiPolygon",
-            "visibility": false,
+            "visibility": true,
             "queryable": true,
-            "displayField": "OBJECTID_1",
+            "displayField": "dto",
             "opacity": 255,
             "styles": {
               "predeterminado": "predeterminado"
@@ -830,7 +945,7 @@
           {
             "key": "lotesearch",
             "params": {
-              "url": "http://146.148.65.245:8400/consulta/lote"
+              "url": "http://136.113.129.29:8400/consulta/lote"
             }
           }
         ],
@@ -840,40 +955,45 @@
         "mapCrs": "EPSG:4326",
         "drawingOrder": [
           "suelos",
-          "coberturas",
           "areas_protegidas",
-          "sendero",
+          "cobertura",
+          "sede",
+          "anden",
           "via_interna",
-          "arbol",
-          "drenaje",
+          "lagunas_artificiales",
           "zona",
-          "fauna",
-          "flora",
-          "cancha",
           "parqueadero",
-          "acueducto_nodo",
-          "acueducto_captacion",
-          "acueducto_tramo",
-          "contenedor_residuos",
-          "alcantarillado_nodo",
-          "alcantarillado_tramo",
+          "cultivo",
+          "edificio",
+          "elementos_const",
+          "granja",
+          "cancha",
           "redes_planta",
+          "unidad_constructiva",
+          "sendero",
+          "drenaje",
           "energia_linea",
+          "acueducto_tramo",
+          "alcantarillado_tramo",
+          "senal_e",
+          "arbol",
+          "fauna",
+          "contenedor_residuos",
+          "flora",
           "energia_nodo",
           "energia_poste",
-          "energia_transformador",
-          "elementos_const",
-          "edificio",
-          "unidad_constructiva",
+          "acueducto_captacion",
+          "acueducto_hidrante",
+          "acueducto_medidor",
+          "acueducto_nodo",
+          "acueducto_valvula",
           "afectacion",
-          "granja",
-          "cultivo",
-          "lagunas_artificiales",
-          "sede"
+          "alcantarillado_nodo",
+          "energia_transformador"
         ],
-        "legendUrl": "http://146.148.65.245:8080/?",
-        "featureInfoUrl": "http://146.148.65.245:8080/?",
-        "printUrl": "http://146.148.65.245:8080/?",
+        "legendUrl": "http://136.113.129.29:8080/?",
+        "featureInfoUrl": "http://136.113.129.29:8080/?",
+        "printUrl": "http://136.113.129.29:8080/?",
         "editConfig": null,
         "thumbnail": "img/mapthumbs/sig_orinoquia.png"
       }
