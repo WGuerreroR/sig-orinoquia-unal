@@ -60,7 +60,7 @@
         "TimeManager": "Gestor de Tiempo",
         "View3D": "Vista 3D"
       },
-      "menulabel": "Mapa & Herramientas"
+      "menulabel": "Herramientas"
     },
     "attribtable": {
       "addfeature": "Añadir elemento",
@@ -597,7 +597,7 @@
       "nodescription": "No hay descripción disponible",
       "none": "Ninguno",
       "noresults": "Sin resultados",
-      "placeholder": "Busque un lugar o agregue mapa",
+      "placeholder": "Busque una capa o agregue mapa",
       "places": "Lugares",
       "providerselection": "Proveedores de búsqueda",
       "recent": "Búsquedas recientes",
