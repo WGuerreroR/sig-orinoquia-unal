@@ -111,7 +111,6 @@
           "scalebarOptions": {
             "units": "metric"
           },
-          "termsUrl": "https://qwc-services.github.io/",
           "viewertitleUrlTarget": "_blank"
         }
       },
@@ -304,20 +303,20 @@
       {
         "name": "Portal",
         "cfg": {
-          "logo": "logo.svg",
+          "logo": "logo.png",
           "topBarText": "",
           "showMenuOnStartup": true,
           "keepMenuOpen": true,
           "bottomBarLinks": [
-              {"href": "https://qwc-services.github.io/", "label": "Homepage", "target": "iframe"},
+              {"href": "https://orinoquia.unal.edu.co/", "label": "UN"},
               {"href": "https://qgis.org", "label": "QGIS.org"}
           ],
           "menuItems": [
-              {"title": "Homepage", "icon": "info", "url": "https://qwc-services.github.io/", "target": "iframe"},
-              {"key": "Tools", "icon": "tools", "title": "Links", "subitems": [
-                {"icon": "link", "title": "qwc2", "url": "https://github.com/qgis/qwc2/"},
-                {"icon": "link", "title": "qwc-docker", "url": "https://github.com/qwc-services/qwc-docker"},
-                {"icon": "link", "title": "qgis.org", "url": "https://qgis.org"}
+            
+              {"key": "Tools", "icon": "tools", "title": "Enlaces", "subitems": [
+                {"icon": "link", "title": "Universidad Nacional", "url": "https://unal.edu.co/"},
+                {"icon": "link", "title": "Sede orinoquía", "url": "https://orinoquia.unal.edu.co/"}
+         
               ]}
           ]
         }
@@ -350,8 +349,6 @@
             {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
             {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
             {"key": "MapLegend", "icon": "list-alt"},
-            {"key": "LayerCatalog", "icon": "catalog", "shortcut": "alt+shift+c"},
-            {"key": "FeatureSearch", "icon": "search"},
             {"key": "Share", "icon": "share", "shortcut": "alt+shift+s"},
             {"key": "Bookmark", "icon": "bookmark", "shortcut": "alt+shift+b"},
             {"key": "Tools", "icon": "tools", "subitems": [
@@ -359,20 +356,13 @@
               {"key": "TimeManager", "icon": "clock"},
               {"key": "Measure", "icon": "measure"},
               {"key": "Redlining", "icon": "draw"},
-              {"key": "Editing", "icon": "editing"},
-              {"key": "FeatureForm", "icon": "featureform"},
-              {"key": "AttributeTable", "icon": "editing"},
-              {"key": "ObjectList", "icon": "list-alt"},
-              {"key": "MapExport", "icon": "rasterexport"},
-              {"key": "Routing", "icon": "routing"},
-              {"key": "Reports", "icon": "report"},
-              {"key": "Panoramax", "icon": "cyclomedia"}
+              {"key": "MapExport", "icon": "rasterexport"}
+   
             ]},
-            {"key": "Print", "icon": "print", "shortcut": "alt+shift+p"},
-            {"key": "TourGuide", "icon": "info"},
-            {"key": "Help", "icon": "info", "shortcut": "alt+shift+h"},
-            {"key": "Settings", "icon": "cog"},
-            {"title": "Homepage", "icon": "link", "url": "https://qwc-services.github.io/", "target": "iframe"}
+
+        
+            {"key": "Settings", "icon": "cog"}
+
           ],
           "searchOptions": {
             "allowSearchFilters": false,
@@ -392,6 +382,7 @@
           "appMenuCompact": false,
           "appMenuVisibleOnStartup": false,
           "logoUrl": "/",
+          "logoSrc": "/assets/img/logo.png",
           "appMenuShortcut": "alt+shift+m",
           "toolbarItemsShortcutPrefix": "alt+shift"
         }
@@ -551,7 +542,6 @@
           "toolbarItems": [
             {"key": "Measure", "mode": "LineString", "icon": "measure_line"},
             {"key": "Measure", "mode": "Polygon", "icon": "measure_polygon"},
-            {"key": "Print", "icon": "print"},
             {"key": "Identify", "icon": "identify_region", "mode": "Region"}
           ]
         }

@@ -4,10 +4,15 @@ div.portal-topbar {
     left: 0;
     right: 0;
     top: 0;
-    height: 3.5em;
+    height: 4.5em;
     z-index: 201;
     display: flex;
     align-items: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),url(https://orinoquia.unal.edu.co/fileadmin/user_upload/docs/Home/campus/1__8_.JPG);
+    background-size: cover;
+    background-position: center center;
+
 }
 
 span.portal-topbar-text {
@@ -18,8 +23,9 @@ span.portal-topbar-text {
 
 img.portal-logo {
     width: auto;
-    height: 3.5em;
+    height: 4em;
     flex: 0 0 auto;
+    margin-left: 1em;
 }
 
 input.portal-search-field {
@@ -55,7 +61,7 @@ div.portal-body {
     left: 0;
     right: 0;
     bottom: 2.25em;
-    top: 3.5em;
+    top: 4.5em;
     z-index: 200;
     display: flex;
     flex-direction: column;

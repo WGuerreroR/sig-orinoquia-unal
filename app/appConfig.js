@@ -103,7 +103,7 @@ export default {
             LayerTreePlugin: LayerTreePlugin,
             LocateButtonPlugin: LocateButtonPlugin,
             MapComparePlugin: MapComparePlugin,
-            MapCopyrightPlugin: MapCopyrightPlugin,
+            //MapCopyrightPlugin: MapCopyrightPlugin,
             MapExportPlugin: MapExportPlugin,
             MapFilterPlugin: MapFilterPlugin,
             MapInfoTooltipPlugin: MapInfoTooltipPlugin(),

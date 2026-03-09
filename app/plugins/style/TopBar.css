@@ -3,13 +3,15 @@ div.TopBar {
     left: 0;
     top: 0;
     right: 0;
-    height: 3.5em;
+    height: 4.5em;
     color: var(--panel-text-color);
-    background-color: var(--panel-bg-color);
     box-shadow: 0px 2px 4px rgba(136, 136, 136, 0.5);
     z-index: 102;
     display: flex;
     align-items: center;
+    background-image: var(--titlebar-ackground-image);
+    background-size: cover;
+    background-position: center center;
 }
 
 div.TopBar:not(.fullscreen) {
@@ -18,8 +20,10 @@ div.TopBar:not(.fullscreen) {
 
 div.TopBar img.topbar-logo {
     width: auto;
-    height: 3.0em;
-    vertical-align: middle;
+    height: 4.0em;
+    vertical-align: top;
+    margin-left: 1em;
+  
 }
 
 div.TopBar div.topbar-center-span {

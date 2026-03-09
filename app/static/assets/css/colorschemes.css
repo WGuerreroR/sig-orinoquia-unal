@@ -26,6 +26,7 @@
     /* Titlebars */
     --titlebar-bg-color: black;
     --titlebar-text-color: white;
+    --titlebar-ackground-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),url(https://orinoquia.unal.edu.co/fileadmin/user_upload/docs/Home/campus/1__8_.JPG);
     /* Button */
     --button-bg-color: white;
     --button-bg-color-hover: #ddd;
@@ -87,6 +88,9 @@
     /* Titlebars */
     --titlebar-bg-color: #475057;
     --titlebar-text-color: white;
+
+    --titlebar-ackground-image: linear-gradient(rgba(5,5,25,0.8), rgba(5,5,5,0.8)),url(https://orinoquia.unal.edu.co/fileadmin/user_upload/docs/Home/campus/1__8_.JPG);
+
     /* Button */
     --button-bg-color: #3f3f3f;
     --button-bg-color-hover: #3a3a3a;

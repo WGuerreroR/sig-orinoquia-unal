@@ -8,7 +8,7 @@ div.AppMenu {
     align-items: center;
     justify-content: right;
     height: 100%;
-    flex: 0 1 20em;
+    flex: 0 1 15em;
 }
 
 div.AppMenu.appmenu-nolabel {
@@ -60,7 +60,7 @@ div.AppMenu div.appmenu-menu-container {
     top: 100%;
     right: 0;
     box-shadow: 0px 2px 4px rgba(136, 136, 136, 0.5);
-    width: 20em;
+    width: 15em;
     max-width: 100vw;
     opacity: 0;
     transform-origin: top;
