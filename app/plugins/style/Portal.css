@@ -47,12 +47,12 @@ div.portal-topbar div.AppMenu ul.appmenu-menu li:last-child {
 }
 
 div.portal-topbar span.appmenu-label {
-    color: var(--titlebar-text-color);
+    color: var(--app-menu-text-color);
 }
 
 div.portal-topbar span.appmenu-icon > span.icon {
-    color: var(--titlebar-text-color);
-    border-color: var(--titlebar-text-color);
+    color: var(--app-menu-text-color);
+    border-color: var(--app-menu-text-color);
 }
 
 div.portal-body {

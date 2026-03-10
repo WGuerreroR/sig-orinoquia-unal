@@ -110,7 +110,7 @@ export default {
             MapLegendPlugin: MapLegendPlugin,
             MapTipPlugin: MapTipPlugin,
             MeasurePlugin: MeasurePlugin,
-            NewsPopupPlugin: NewsPopupPlugin,
+           // NewsPopupPlugin: NewsPopupPlugin,
             ObjectListPlugin: ObjectListPlugin(/* CustomEditingInterface */),
             OverviewMapPlugin: OverviewMapPlugin,
             PanoramaxPlugin: PanoramaxPlugin,
