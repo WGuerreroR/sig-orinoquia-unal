@@ -58,7 +58,8 @@
         "Tools": "Werkzeuge",
         "TourGuide": "Einführung",
         "TimeManager": "Zeitleiste",
-        "View3D": "3D Ansicht"
+        "View3D": "3D Ansicht",
+        "Dashboard": "Dashboards"
       },
       "menulabel": "Karte & Werkzeuge"
     },

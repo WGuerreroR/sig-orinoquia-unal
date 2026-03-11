@@ -200,10 +200,13 @@ class AppMenu extends React.Component {
         MiscUtils.killEvent(ev);
     };
     onSubmenuClicked = (key, level) => {
+  
         const a = this.state.submenusVisible[level] === key ? [] : [key];
         this.setState((state) => ({submenusVisible: state.submenusVisible.slice(0, level).concat(a)}));
     };
     onMenuitemClicked = (item) => {
+
+        console.log(" --- onMenuitemClicked  ---- ", item)
         if (!this.props.keepMenuOpen && this.state.menuVisible) {
             this.toggleMenu();
         }
@@ -211,6 +214,7 @@ class AppMenu extends React.Component {
             const label = item.title ? LocaleUtils.tr(item.title) : LocaleUtils.tr("appmenu.items." + item.key + (item.mode || ""));
             this.props.openExternalUrl(item.url, item.target, label, item.icon);
         } else {
+            console.log(" --- onMenuitemClicked 2  ---- ", item)
             this.props.setCurrentTask(item.task || item.key, item.mode, item.mapClickAction || (item.identifyEnabled ? "identify" : null));
         }
     };
@@ -229,6 +233,7 @@ class AppMenu extends React.Component {
                         "appmenu-submenu-active": active,
                         "appmenu-submenu-expanded": visible
                     });
+                    console.log(" --- item",item)
                     return (
                         <li className={className} key={item.key ?? item.title}
                             onClick={() => this.onSubmenuClicked(item.key, level)}

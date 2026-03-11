@@ -56,6 +56,7 @@
     "appmenu.items.Bookmark",
     "appmenu.items.TimeManager",
     "appmenu.items.View3D",
+    "appmenu.items.Dashboard",
     "colorschemes.default",
     "colorschemes.dark",
     "colorschemes.highcontrast"

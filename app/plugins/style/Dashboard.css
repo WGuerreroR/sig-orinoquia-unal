@@ -1,0 +1,168 @@
+/* =============================================
+   Dashboard SIG Orinoquia - Sidebar Styles
+   ============================================= */
+
+/* Contenedor principal */
+.dashboard-body {
+    padding: 16px;
+    background-color: var(--container-bg-color);
+    min-height: 100%;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #94a3b8;
+    margin: 0 0 4px;
+    text-transform: uppercase;
+  }
+  
+  .dashboard-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-color);
+    margin: 0 0 8px;
+  }
+  
+  .dashboard-divider {
+    width: 32px;
+    height: 3px;
+    background: linear-gradient(90deg, #2d6a4f, #457b9d);
+    border-radius: 2px;
+  }
+  
+  /* =============================================
+     CategoryCard
+     ============================================= */
+  
+  .category-card {
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    background-color:  var( --input-bg-color);
+    overflow: hidden;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .category-card.open {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Botón header de categoría */
+  .category-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background-color: var(--app-menu-bg-color);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  /* Número de categoría */
+  .category-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+  }
+  
+  .category-number.closed {
+    color: inherit; /* se sobreescribe con inline accent */
+  }
+  
+  .category-number.open {
+    color: #ffffff;
+  }
+  
+  /* Texto de categoría */
+  .category-name {
+    font-size: 13px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+    
+  }
+  
+  .category-name.closed {
+    color: var(--text-color);
+  }
+  
+  .category-subtitle {
+    font-size: 11px;
+    color: #a0aec0;
+    margin-top: 1px;
+  }
+  
+  /* Flecha */
+  .category-arrow {
+    font-size: 11px;
+    display: inline-block;
+    transition: transform 0.25s ease;
+    color: #a0aec0;
+  }
+  
+  .category-arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  .category-arrow.closed {
+    transform: rotate(0deg);
+  }
+  
+  /* =============================================
+     Topics (lista colapsable)
+     ============================================= */
+  
+  .topics-container {
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .topics-inner {
+    padding: 0 12px 12px 12px;
+    margin-left: 22px;
+  }
+  
+  /* =============================================
+     TopicLink
+     ============================================= */
+  
+  .topic-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 12.5px;
+    transition: all 0.18s ease;
+  }
+  
+  .topic-link:hover {
+    padding-left: 14px;
+    color: inherit; /* se sobreescribe con inline accent */
+  }
+  
+  .topic-icon {
+    flex-shrink: 0;
+    opacity: 0.4;
+  }
+  
+  .topic-link:hover .topic-icon {
+    opacity: 0.9;
+  }

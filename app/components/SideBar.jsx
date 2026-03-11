@@ -60,6 +60,7 @@ class SideBar extends React.Component {
         const newVisible = this.props.currentTask && this.props.currentTask.id === this.props.id;
         const oldVisible = prevProps.currentTask && prevProps.currentTask.id === prevProps.id;
         if (newVisible && (!oldVisible || this.props.currentTask.mode !== prevProps.currentTask.mode)) {
+           console.log(" $$$$$$ ")
             this.setState({render: true});
             this.props.onShow(this.props.currentTask.mode);
         } else if (!newVisible && oldVisible) {

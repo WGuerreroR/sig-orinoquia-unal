@@ -105,6 +105,7 @@
       {
         "name": "Bookmark"
       },
+
       {
         "name": "BottomBar",
         "cfg": {
@@ -346,6 +347,7 @@
         "cfg": {
           "menuItems": [
             {"key": "Portal", "icon": "themes"},
+            {"key": "Dashboard", "icon": "dashboard"},
             {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
             {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
             {"key": "MapLegend", "icon": "list-alt"},
@@ -432,6 +434,10 @@
             }
           ]
         }
+      },
+      {
+        "name": "Dashboard"
+       
       },
       {
         "name": "Share",

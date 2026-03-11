@@ -58,7 +58,8 @@
         "Tools": "地図ツール",
         "TourGuide": "ツアー・ガイド",
         "TimeManager": "タイム・マネージャ",
-        "View3D": "3D 表示"
+        "View3D": "3D 表示",
+        "Dashboard": ""
       },
       "menulabel": "地図 & ツール"
     },

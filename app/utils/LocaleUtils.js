@@ -71,9 +71,10 @@ const LocaleUtils = {
         });
     },
     tr(key) {
+       
         const state = StandardApp.store.getState();
         const text = key in state.locale.messages ? (state.locale.messages[key] || state.locale.fallbackMessages[key] || key) : key;
-
+        //console.log("key ",key,text, state.locale.messages)
         const args = Array.prototype.slice.call(arguments, 1);
         if (args.length > 0) {
             return text.replace(/{(\d+)}/g, (match, number) => {

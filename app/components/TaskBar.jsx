@@ -46,6 +46,7 @@ class TaskBar extends React.Component {
         this.props.setCurrentTask(null);
     };
     render() {
+        
         if (this.props.currentTask.id !== this.props.task) {
             return null;
         }

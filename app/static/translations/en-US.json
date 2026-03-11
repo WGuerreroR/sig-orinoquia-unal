@@ -58,7 +58,8 @@
         "Tools": "Map Tools",
         "TourGuide": "Tour Guide",
         "TimeManager": "Time Manager",
-        "View3D": "3D View"
+        "View3D": "3D View",
+        "Dashboard": "Dashboards"
       },
       "menulabel": "Map & Tools"
     },

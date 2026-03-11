@@ -58,7 +58,8 @@
         "Tools": "Strumenti",
         "TourGuide": "Guida introduttiva",
         "TimeManager": "Linea temporale",
-        "View3D": "Vista 3D"
+        "View3D": "Vista 3D",
+        "Dashboard": "Pannello di controllo"
       },
       "menulabel": "Mappa e strumenti"
     },

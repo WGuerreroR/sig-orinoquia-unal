@@ -58,7 +58,8 @@
         "Tools": "Средства картографии",
         "TourGuide": "",
         "TimeManager": "",
-        "View3D": ""
+        "View3D": "",
+        "Dashboard": ""
       },
       "menulabel": "Карта и инструменты"
     },

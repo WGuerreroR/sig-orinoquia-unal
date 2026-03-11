@@ -58,7 +58,8 @@
         "Tools": "Ferramentas do Mapa",
         "TourGuide": "",
         "TimeManager": "Gestor de Tempo",
-        "View3D": ""
+        "View3D": "",
+        "Dashboard": ""
       },
       "menulabel": "Mapas e Ferramentas"
     },

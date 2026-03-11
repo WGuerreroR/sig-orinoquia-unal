@@ -15,6 +15,7 @@ export const SET_CURRENT_TASK = 'SET_CURRENT_TASK';
 export const SET_CURRENT_TASK_BLOCKED = 'SET_CURRENT_TASK_BLOCKED';
 
 export function setCurrentTask(task, mode = null, mapClickAction = null, data = null) {
+    console.log(" --- setCurrentTask", task, mode, mapClickAction, data)
     return (dispatch, getState) => {
         // Don't do anything if current task is blocked
         if (getState().task && getState().task.blocked === true) {
@@ -24,7 +25,17 @@ export function setCurrentTask(task, mode = null, mapClickAction = null, data = 
         if (!mapClickAction) {
             const device = ConfigUtils.isMobile() ? 'mobile' : 'desktop';
             mapClickAction = (getState().localConfig?.plugins?.[device] || []).find(config => config.name === task)?.mapClickAction;
+            console.log(" --- mapClickAction", mapClickAction)
         }
+
+        console.log(" --- dispatch", {
+        type: SET_CURRENT_TASK,
+        id: task,
+        mode: mode,
+        data: data,
+        unsetOnMapClick: mapClickAction === 'unset',
+        identifyEnabled: task === null || mapClickAction === 'identify'
+    })
         dispatch({
             type: SET_CURRENT_TASK,
             id: task,
