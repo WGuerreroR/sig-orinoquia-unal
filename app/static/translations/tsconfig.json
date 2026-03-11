@@ -71,6 +71,7 @@
     "appmenu.filter",
     "appmenu.items.Bookmark",
     "appmenu.items.Compare3D",
+    "appmenu.items.Dashboard",
     "appmenu.items.Editing",
     "appmenu.items.ExportObjects3D",
     "appmenu.items.Help",

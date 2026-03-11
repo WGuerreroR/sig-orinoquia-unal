@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "ブックマーク",
         "Compare3D": "比較",
+        "Dashboard": "",
         "Editing": "編集",
         "ExportObjects3D": "オブジェクトをエクスポート",
         "Help": "ヘルプ",
@@ -58,8 +59,7 @@
         "Tools": "地図ツール",
         "TourGuide": "ツアー・ガイド",
         "TimeManager": "タイム・マネージャ",
-        "View3D": "3D 表示",
-        "Dashboard": ""
+        "View3D": "3D 表示"
       },
       "menulabel": "地図 & ツール"
     },

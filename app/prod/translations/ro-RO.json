@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "Marcaj",
         "Compare3D": "",
+        "Dashboard": "",
         "Editing": "Editare",
         "ExportObjects3D": "",
         "Help": "Ajutor",
@@ -58,8 +59,7 @@
         "Tools": "Unelte hartă",
         "TourGuide": "",
         "TimeManager": "Informații temporale",
-        "View3D": "",
-        "Dashboard": ""
+        "View3D": ""
       },
       "menulabel": "Hărți & Unelte"
     },

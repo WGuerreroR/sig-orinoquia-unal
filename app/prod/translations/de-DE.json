@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "Lesezeichen",
         "Compare3D": "Vergleichen",
+        "Dashboard": "Dashboards",
         "Editing": "Editieren",
         "ExportObjects3D": "Objektexport",
         "Help": "Hilfe",
@@ -58,8 +59,7 @@
         "Tools": "Werkzeuge",
         "TourGuide": "Einführung",
         "TimeManager": "Zeitleiste",
-        "View3D": "3D Ansicht",
-        "Dashboard": "Dashboards"
+        "View3D": "3D Ansicht"
       },
       "menulabel": "Karte & Werkzeuge"
     },

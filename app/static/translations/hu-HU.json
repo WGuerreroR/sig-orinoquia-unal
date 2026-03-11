@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "",
         "Compare3D": "",
+        "Dashboard": "",
         "Editing": "Szerkesztés",
         "ExportObjects3D": "",
         "Help": "Segítség",
@@ -58,8 +59,7 @@
         "Tools": "Térkép eszközök",
         "TourGuide": "",
         "TimeManager": "",
-        "View3D": "",
-        "Dashboard": ""
+        "View3D": ""
       },
       "menulabel": "Eszközök"
     },

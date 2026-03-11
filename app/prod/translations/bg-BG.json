@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "Отметки",
         "Compare3D": "Сравни",
+        "Dashboard": "",
         "Editing": "Редактиране на",
         "ExportObjects3D": "",
         "Help": "Помощ",
@@ -58,8 +59,7 @@
         "Tools": "Инструменти за карта",
         "TourGuide": "",
         "TimeManager": "Мениджър на времето",
-        "View3D": "3D изглед",
-        "Dashboard": ""
+        "View3D": "3D изглед"
       },
       "menulabel": "Карта и инструменти"
     },

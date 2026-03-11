@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "Záložky",
         "Compare3D": "",
+        "Dashboard": "",
         "Editing": "Úpravy",
         "ExportObjects3D": "",
         "Help": "Nápověda",
@@ -58,8 +59,7 @@
         "Tools": "Nástroje mapy",
         "TourGuide": "",
         "TimeManager": "",
-        "View3D": "",
-        "Dashboard": ""
+        "View3D": ""
       },
       "menulabel": "Mapa & Nástroje"
     },

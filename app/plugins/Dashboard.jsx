@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SideBar from '../components/SideBar';
+import LocaleUtils from '../utils/LocaleUtils';
 import './style/Dashboard.css';
 
 var data = [
@@ -136,7 +137,8 @@ class Dashboard extends React.Component {
   onHide() { console.log("Dashboard cerrado"); }
   render() {
     return (
-      <SideBar icon="tools" id="Dashboard" onHide={this.onHide} onShow={this.onShow} side="right" title="Dashboard" width="30em">
+      <SideBar icon="dashboard" id="Dashboard" onHide={this.onHide} onShow={this.onShow}
+       side="right" title={LocaleUtils.tr("appmenu.items.Dashboard")} width="30em">
         {() => ({ body: this.renderBody() })}
       </SideBar>
     );
@@ -145,8 +147,9 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard-body">
         <div className="dashboard-header">
-          <p className="dashboard-label">Tableros de control</p>
+    
           <h2 className="dashboard-title">SIG Orinoquia</h2>
+          <p className="dashboard-label">Temáticas</p>
           <div className="dashboard-divider" />
         </div>
         {data.map(function(cat) {

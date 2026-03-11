@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "Marcadores",
         "Compare3D": "Comparar",
+        "Dashboard": "Tableros de análitica",
         "Editing": "Edición",
         "ExportObjects3D": "Exportar objetos",
         "Help": "Ayuda",
@@ -58,8 +59,7 @@
         "Tools": "Herramientas de Mapa",
         "TourGuide": "Guía turística",
         "TimeManager": "Gestor de Tiempo",
-        "View3D": "Vista 3D",
-        "Dashboard": "Tableros de análitica"
+        "View3D": "Vista 3D"
       },
       "menulabel": "Herramientas"
     },

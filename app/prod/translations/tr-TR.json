@@ -14,6 +14,7 @@
       "items": {
         "Bookmark": "Yer işaretleri",
         "Compare3D": "Karşılaştır",
+        "Dashboard": "",
         "Editing": "Düzenleme",
         "ExportObjects3D": "",
         "Help": "Yardım",
@@ -58,8 +59,7 @@
         "Tools": "Harita Araçları",
         "TourGuide": "",
         "TimeManager": "Zaman Yöneticisi",
-        "View3D": "3 Boyutlu Görünüm",
-        "Dashboard": ""
+        "View3D": "3 Boyutlu Görünüm"
       },
       "menulabel": "Harita & Araçlar"
     },
