@@ -22,13 +22,14 @@ var data = [
       { id: 31, name: "Biodiversidad de fauna y flora", url: "http://136.113.129.29:3000/public-dashboards/94c22199ae404a91b452a389f66b9040" },
       { id: 32, name: "Componente hidrológico", url: "http://136.113.129.29:3000/public-dashboards/a3d6ca7e0d3b4b2987e165cc572b904a" },
       { id: 33, name: "Contexto regional: generalidades ambientales del municipio de Arauca", url: "http://136.113.129.29:3000/public-dashboards/3a6cefa7639c4d4baacfe35e42d43eea" },
-      { id: 34, name: "Sendero ecológico y granja experimental", url: "http://136.113.129.29:3000/public-dashboards/3a6cefa7639c4d4baacfe35e42d43eea" }
+      { id: 34, name: "Sendero ecológico y granja experimental", url: "http://136.113.129.29:3000/public-dashboards/44cd8b1141e84f2faf73bf90f995054b" }
     ]
   },
   { id: 4, category: "4. Ordenamiento Territorial",accent: "#9C1607", light: "#FCC1BB" ,
     topics: [
-      { id: 41, name: "Uso del suelo", url: "http://136.113.129.29:3000/public-dashboards/a557894c82ce454d921d8244f3e3addc" },
-      { id: 42, name: "Zonificación ecológica ambiental", url: "http://136.113.129.29:3000/public-dashboards/dd5ef5c1adba48feb13222f621798083" }
+      { id: 41, name: "Amenaza por inundación", url: "http://136.113.129.29:3000/public-dashboards/eb73cde87aa0456286e533563fb36263" },
+      { id: 42, name: "Uso del suelo", url: "http://136.113.129.29:3000/public-dashboards/a557894c82ce454d921d8244f3e3addc" },
+      { id: 43, name: "Zonificación ecológica ambiental", url: "http://136.113.129.29:3000/public-dashboards/dd5ef5c1adba48feb13222f621798083" }
     ]
   }
 ];

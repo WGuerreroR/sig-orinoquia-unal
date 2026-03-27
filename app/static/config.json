@@ -346,20 +346,16 @@
         "name": "TopBar",
         "cfg": {
           "menuItems": [
-            {"key": "Portal", "icon": "themes"},
-            {"key": "Dashboard", "icon": "dashboard"},
             {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
+            {"key": "Dashboard", "icon": "dashboard"},
             {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
             {"key": "MapLegend", "icon": "list-alt"},
             {"key": "Share", "icon": "share", "shortcut": "alt+shift+s"},
             {"key": "Bookmark", "icon": "bookmark", "shortcut": "alt+shift+b"},
             {"key": "Tools", "icon": "tools", "subitems": [
               {"key": "Identify", "icon": "identify_region", "mode": "Region"},
-              {"key": "TimeManager", "icon": "clock"},
               {"key": "Measure", "icon": "measure"},
-              {"key": "Redlining", "icon": "draw"},
-              {"key": "MapExport", "icon": "rasterexport"}
-   
+              {"key": "Redlining", "icon": "draw"}
             ]},
 
         
@@ -402,6 +398,10 @@
         "name": "Settings",
         "cfg": {
           "languages": [
+            {
+              "title": "Español",
+              "value": "es-ES"
+            },
             {
               "title": "English",
               "value": "en-US"
