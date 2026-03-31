@@ -1,34 +1,22 @@
-from fastapi import FastAPI, HTTPException, Depends, Request , Response, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI
+from routers import geo_carga
 
 
 
-app = FastAPI()
 
-# Middleware CORS para permitir solicitudes de todos los orígenes
+app = FastAPI(title="GeoVisor API SIG Orinoquia UNAL")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permite solicitudes desde cualquier origen
+    allow_origins=["*"],  # o una lista de dominios específicos
     allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos HTTP
-    allow_headers=["*"],  # Permite todos los encabezados
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-# Función auxiliar para obtener el cuerpo de la solicitud
-async def get_body(request: Request):
-    """
-    Función auxiliar para extraer el cuerpo de la solicitud en formato bytes.
-    Se utiliza en varios endpoints donde el cuerpo es necesario.
-    """
-    return await request.body()
 
-@app.get("/consulta/prueba")
-async def prueba():
-    """
-    Endpoint de prueba para verificar que el servidor está activo.
-    
-    Devuelve una lista simple con el valor "feliz".
-    """
-    bbox = ["feliz"]
-    return bbox
+
+
+# Registrar routers con prefijos
+app.include_router(geo_carga.router, prefix="/api/v1")

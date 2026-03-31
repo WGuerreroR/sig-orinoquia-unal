@@ -22,7 +22,7 @@ const dns = require('dns');
 const { lookup, lookupService } = dns.promises;
 
 let hostFqdn = "";
-const themesConfigPath = process.env.QWC2_THEMES_CONFIG || "static/themesConfig.json";
+const themesConfigPath =  "static/themesConfig.json";
 
 const usedThemeIds = [];
 const autogenExternalLayers = [];
@@ -657,16 +657,16 @@ function genThemes(themesConfig) {
         }
 
         // write config file
-        fs.writeFile(process.cwd() + '/static/themes.json', JSON.stringify(result, null, 2), (error) => {
+       /* fs.writeFile(process.cwd() + '/static/themes.json', JSON.stringify(result, null, 2), (error) => {
             if (error) {
-                /* eslint-disable-next-line */
+               // /* eslint-disable-next-line 
                 console.error("ERROR:", error);
                 process.exit(1);
             } else {
-                /* eslint-disable-next-line */
+                ///* eslint-disable-next-line 
                 console.log("\nCreated themes.json\n\n");
             }
-        });
+        });*/
 
     }).catch((error) => {
         /* eslint-disable-next-line */

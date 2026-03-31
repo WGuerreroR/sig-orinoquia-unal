@@ -1,3 +1,6 @@
 data/postgis/*
 data/grafana/*
 api/__pycache__/
+api/services/__pycache__/*
+api/db/__pycache__/*
+api/routers/__pycache__/*
