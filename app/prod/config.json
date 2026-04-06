@@ -171,12 +171,7 @@
           }
         }
       },
-      {
-        "name": "LayerCatalog",
-        "cfg": {
-          "catalogUrl": "https://qwc2.sourcepole.ch/assets/catalog.json"
-        }
-      },
+     
       {
         "name": "LayerTree",
         "cfg": {
