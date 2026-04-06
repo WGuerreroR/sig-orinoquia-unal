@@ -1,4 +1,5 @@
 {
+  "dashboardServiceUrl": "http://136.113.129.29:8400/api/v1/categoria/",
   "searchServiceUrl": "http://localhost:8088/api/v2/search/",
   "searchDataServiceUrl": "http://localhost:8088/api/v2/search/geom/",
   "editServiceUrl": "http://localhost:8088/api/v1/data/",

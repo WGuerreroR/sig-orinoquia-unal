@@ -2,107 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SideBar from '../components/SideBar';
 import LocaleUtils from '../utils/LocaleUtils';
+import axios from 'axios';
 import './style/Dashboard.css';
+import ConfigUtils from '../utils/ConfigUtils';
 
-var data = [
-  {
-    "nombre": "Académico",
-    "color_acento": "#1d3557",
-    "color_claro": "#d0e8f7",
-    "id": 1,
-    "temas": [
-      {
-        "nombre": "Matrícula",
-        "url": "http://136.113.129.29:3000/public-dashboards/ed1db971eff94c5e9467d1153e929671",
-        "id": 2
-      },
-      {
-        "nombre": "Alumnos",
-        "url": "http://136.113.129.29:3000/public-dashboards/839282d0faa34dac95d1b98944d56298",
-        "id": 1
-      },
-      {
-        "nombre": "Personal administrativo y docente",
-        "url": "http://136.113.129.29:3000/public-dashboards/593a59e56b0541cfaaefd4e5da02dfc1",
-        "id": 3
-      }
-    ]
-  },
-  {
-    "nombre": "Infraestructura",
-    "color_acento": "#7d5a00",
-    "color_claro": "#fdefc3",
-    "id": 2,
-    "temas": [
-      {
-        "nombre": "Redes",
-        "url": "http://136.113.129.29:3000/public-dashboards/2c0b3c8c228c4f8e9d307fc099bed462",
-        "id": 13
-      },
-      {
-        "nombre": "Componente Físico",
-        "url": "http://136.113.129.29:3000/public-dashboards/96348b163c4b41eb811a52c01e5310cb",
-        "id": 5
-      },
-      {
-        "nombre": "Inventario Infraestructura",
-        "url": "http://136.113.129.29:3000/public-dashboards/96348b163c4b41eb811a52c01e5310cb",
-        "id": 4
-      }
-    ]
-  },
-  {
-    "nombre": "Ambiental",
-    "color_acento": "#1b7a4a",
-    "color_claro": "#d5f5e3",
-    "id": 3,
-    "temas": [
-      {
-        "nombre": "Sendero ecológico y granja experimental",
-        "url": "http://136.113.129.29:3000/public-dashboards/44cd8b1141e84f2faf73bf90f995054b",
-        "id": 9
-      },
-      {
-        "nombre": "Biodiversidad de fauna y flora",
-        "url": "http://136.113.129.29:3000/public-dashboards/94c22199ae404a91b452a389f66b9040",
-        "id": 6
-      },
-      {
-        "nombre": "Componente hidrológico",
-        "url": "http://136.113.129.29:3000/public-dashboards/a3d6ca7e0d3b4b2987e165cc572b904a",
-        "id": 7
-      },
-      {
-        "nombre": "Contexto regional: generalidades ambientales del municipio de Arauca",
-        "url": "http://136.113.129.29:3000/public-dashboards/3a6cefa7639c4d4baacfe35e42d43eea",
-        "id": 8
-      }
-    ]
-  },
-  {
-    "nombre": "Ordenamiento Territorial",
-    "color_acento": "#9C1607",
-    "color_claro": "#FCC1BB",
-    "id": 4,
-    "temas": [
-      {
-        "nombre": "Uso del suelo",
-        "url": "http://136.113.129.29:3000/public-dashboards/a557894c82ce454d921d8244f3e3addc",
-        "id": 11
-      },
-      {
-        "nombre": "Amenaza por inundación",
-        "url": "http://136.113.129.29:3000/public-dashboards/eb73cde87aa0456286e533563fb36263",
-        "id": 10
-      },
-      {
-        "nombre": "Zonificación ecológica ambiental",
-        "url": "http://136.113.129.29:3000/public-dashboards/dd5ef5c1adba48feb13222f621798083",
-        "id": 12
-      }
-    ]
-  }
-];
 
 class TopicLink extends React.Component {
   constructor(props) {
@@ -204,31 +107,79 @@ class CategoryCard extends React.Component {
 }
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      loading: true,
+      error: null
+    };
+  }
+
   onShow() { console.log("Dashboard abierto"); }
   onHide() { console.log("Dashboard cerrado"); }
+
+  componentDidMount() {
+    const dashboardServiceUrl = ConfigUtils.getConfigProp("dashboardServiceUrl").replace(/\/$/, '');
+   
+    axios.get(dashboardServiceUrl)
+      .then(res => {
+        this.setState({
+          data: res.data,
+          loading: false
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        this.setState({
+          error: "Error cargando datos",
+          loading: false
+        });
+      });
+  }
+
   render() {
     return (
-      <SideBar icon="dashboard" id="Dashboard" onHide={this.onHide} onShow={this.onShow}
-       side="right" title={LocaleUtils.tr("appmenu.items.Dashboard")} width="30em">
+      <SideBar
+        icon="dashboard"
+        id="Dashboard"
+        onHide={this.onHide}
+        onShow={this.onShow}
+        side="right"
+        title={LocaleUtils.tr("appmenu.items.Dashboard")}
+        width="30em"
+      >
         {() => ({ body: this.renderBody() })}
       </SideBar>
     );
   }
+
   renderBody() {
+    const { data, loading, error } = this.state;
+
+    if (loading) {
+      return <div className="dashboard-body">Cargando...</div>;
+    }
+
+    if (error) {
+      return <div className="dashboard-body">{error}</div>;
+    }
+
     return (
       <div className="dashboard-body">
         <div className="dashboard-header">
-    
           <h2 className="dashboard-title">SIG Orinoquia</h2>
           <p className="dashboard-label">Temáticas</p>
           <div className="dashboard-divider" />
         </div>
-        {data.map(function(cat) {
-          return <CategoryCard key={cat.id} cat={cat} />;
-        })}
+
+        {data.map(cat => (
+          <CategoryCard key={cat.id} cat={cat} />
+        ))}
       </div>
     );
   }
 }
+
 
 export default connect(function(state) { return {}; }, {})(Dashboard);
