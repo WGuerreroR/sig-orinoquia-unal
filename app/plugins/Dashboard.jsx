@@ -36,7 +36,7 @@ var data = [
     "temas": [
       {
         "nombre": "Redes",
-        "url": "http://localhost:3000/public-dashboards/2c0b3c8c228c4f8e9d307fc099bed462",
+        "url": "http://136.113.129.29:3000/public-dashboards/2c0b3c8c228c4f8e9d307fc099bed462",
         "id": 13
       },
       {
@@ -46,7 +46,7 @@ var data = [
       },
       {
         "nombre": "Inventario Infraestructura",
-        "url": "http://localhost:3000/public-dashboards/96348b163c4b41eb811a52c01e5310cb",
+        "url": "http://136.113.129.29:3000/public-dashboards/96348b163c4b41eb811a52c01e5310cb",
         "id": 4
       }
     ]
