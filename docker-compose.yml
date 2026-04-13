@@ -17,9 +17,8 @@ services:
       context: ./api
       dockerfile: Dockerfile
     volumes:
-      - ./api/:/app/
+      - ./data/geojson/:/app/data/geojson
     working_dir: /app
-    command: "sh start.sh"
     ports:
       - "${API_PORT}:8400"
 
