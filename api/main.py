@@ -1,6 +1,6 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from routers import geo_carga, categoria, tema
+from routers import geo_carga, categoria, tema, data
 app = FastAPI(title="GeoVisor API SIG Orinoquia UNAL")
 
 app.add_middleware(
@@ -15,3 +15,4 @@ app.add_middleware(
 app.include_router(geo_carga.router, prefix="/api/v1")
 app.include_router(categoria.router, prefix="/api/v1")
 app.include_router(tema.router, prefix="/api/v1")
+app.include_router(data.router, prefix="/api/v1")
