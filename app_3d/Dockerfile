@@ -17,7 +17,7 @@ FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copiar assets de Cesium
-COPY --from=builder /app/public/cesium /usr/share/nginx/html/cesium
+COPY --from=builder /app/node_modules/cesium/Build/Cesium /usr/share/nginx/html/cesium
 
 EXPOSE 80
 
