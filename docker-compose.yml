@@ -2,6 +2,13 @@ version: '3.9'
 
 services:
 
+  3d-viewer:
+    build:
+      context: ./app_3d
+      dockerfile: Dockerfile
+    ports:
+      - "8500:80"
+
   web:
     build:
       context: ./app
@@ -20,7 +27,7 @@ services:
       - ./data/geojson/:/app/data/geojson
     working_dir: /app
     ports:
-      - "${API_PORT}:8400"
+      - "8400:8400"
 
   db:
     image: postgis/postgis:${POSTGIS_VERSION}
