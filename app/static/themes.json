@@ -887,7 +887,7 @@
             "name": "cobertura",
             "title": "cobertura",
             "geometryType": "MultiPolygon",
-            "visibility": true,
+            "visibility": false,
             "queryable": true,
             "displayField": "OBJECTID",
             "opacity": 255,

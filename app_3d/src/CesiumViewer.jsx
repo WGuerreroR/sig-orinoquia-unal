@@ -84,7 +84,7 @@ export default function CesiumViewer() {
             // Altura base
             entity.polygon.height = 0;
 
-            entity.polygon.extrudedHeight =altura;
+            entity.polygon.extrudedHeight = 0;
     
             if (nombre?.toLowerCase().includes("laborat")) {
               entity.polygon.material = Cesium.Color.GOLD.withAlpha(0.6);
