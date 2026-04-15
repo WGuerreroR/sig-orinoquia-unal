@@ -142,7 +142,7 @@ export default function CesiumViewer() {
               pixelOffset: new Cesium.Cartesian2(0, -10),
               distanceDisplayCondition: new Cesium.DistanceDisplayCondition(
                 0,      // distancia mínima (cerca)
-                380    // distancia máxima (lejos)
+                350    // distancia máxima (lejos)
               )
             });
 
