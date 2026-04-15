@@ -311,6 +311,7 @@
           "menuItems": [
             
               {"key": "Tools", "icon": "tools", "title": "Enlaces", "subitems": [
+                {"icon": "3dviewer", "title": "Visor 3D Edificaciones", "url": "http://136.113.129.29:8500"},
                 {"icon": "link", "title": "Universidad Nacional", "url": "https://unal.edu.co/"},
                 {"icon": "link", "title": "Sede orinoquía", "url": "https://orinoquia.unal.edu.co/"}
          
@@ -344,6 +345,7 @@
           "menuItems": [
             {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
             {"key": "Dashboard", "icon": "dashboard"},
+            {"key": "Viewer3D", "icon": "3dviewer", "url": "http://136.113.129.29:8500"},
             {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
             {"key": "MapLegend", "icon": "list-alt"},
             {"key": "Share", "icon": "share", "shortcut": "alt+shift+s"},

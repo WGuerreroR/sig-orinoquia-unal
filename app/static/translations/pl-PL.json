@@ -59,7 +59,8 @@
         "Tools": "Narzędzia Mapy",
         "TourGuide": "",
         "TimeManager": "",
-        "View3D": ""
+        "View3D": "",
+        "Viewer3D": ""
       },
       "menulabel": "Zawartość mapy i narzędzia"
     },

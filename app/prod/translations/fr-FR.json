@@ -59,7 +59,8 @@
         "Tools": "Outils",
         "TourGuide": "Visite Guidée",
         "TimeManager": "Ligne du temps",
-        "View3D": "Vue 3D"
+        "View3D": "Vue 3D",
+        "Viewer3D": "Visionneuse de bâtiments 3D"
       },
       "menulabel": "Cartes et outils"
     },

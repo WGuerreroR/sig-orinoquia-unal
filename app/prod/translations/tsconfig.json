@@ -57,6 +57,7 @@
     "appmenu.items.TimeManager",
     "appmenu.items.View3D",
     "appmenu.items.Dashboard",
+    "appmenu.items.Viewer3D",
     "colorschemes.default",
     "colorschemes.dark",
     "colorschemes.highcontrast"

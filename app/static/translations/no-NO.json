@@ -59,7 +59,8 @@
         "Tools": "Kartverktøy",
         "TourGuide": "",
         "TimeManager": "",
-        "View3D": ""
+        "View3D": "",
+        "Viewer3D": ""
       },
       "menulabel": "Kart & Verktøy"
     },

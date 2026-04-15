@@ -59,7 +59,8 @@
         "Tools": "Herramientas de Mapa",
         "TourGuide": "Guía turística",
         "TimeManager": "Gestor de Tiempo",
-        "View3D": "Vista 3D"
+        "View3D": "Vista 3D",
+        "Viewer3D": "Visor de edificaciones 3D"
       },
       "menulabel": "Herramientas"
     },

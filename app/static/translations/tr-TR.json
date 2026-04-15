@@ -59,7 +59,8 @@
         "Tools": "Harita Araçları",
         "TourGuide": "",
         "TimeManager": "Zaman Yöneticisi",
-        "View3D": "3 Boyutlu Görünüm"
+        "View3D": "3 Boyutlu Görünüm",
+        "Viewer3D": ""
       },
       "menulabel": "Harita & Araçlar"
     },
