@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import * as Cesium from "cesium";
 import "cesium/Build/Cesium/Widgets/widgets.css";
+import Legend from "./Legend";
 
 export default function CesiumViewer() {
   const viewerRef = useRef(null);
+  const server = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     if (!viewerRef.current) return;
@@ -15,7 +17,7 @@ export default function CesiumViewer() {
 
   });
 
-  const server = "http://136.113.129.29:8400"
+  
     const url = `${server}/api/v1/data/edificio/data.geojson`;
     console.log(url)
       Cesium.GeoJsonDataSource.load(url, {
@@ -28,13 +30,13 @@ export default function CesiumViewer() {
         viewer.zoomTo(dataSource).then(() => {
           viewer.camera.setView({
             destination: Cesium.Cartesian3.fromDegrees(
-                -70.746, // longitude
-                7.0165,  // latitude
-                168  // height
+              -70.74637827094256,
+              7.021573570407648,
+              400
             ),
             orientation: {
-                heading: Cesium.Math.toRadians(154.75440079895003),
-                pitch: Cesium.Math.toRadians(-22.820103233609647),
+                heading: Cesium.Math.toRadians(154.75440050996818),
+                pitch: Cesium.Math.toRadians(-22.820104690091828),
                 roll: 0
             }
         });
@@ -46,20 +48,21 @@ export default function CesiumViewer() {
         viewer.zoomTo(dataSource).then(() => {
           viewer.camera.setView({
             destination: Cesium.Cartesian3.fromDegrees(
-                -70.746, // longitude
-                7.0165,  // latitude
-                168  // height
+              -70.74637827094256,
+              7.021573570407648,
+              400
             ),
             orientation: {
-                heading: Cesium.Math.toRadians(154.75440079895003),
-                pitch: Cesium.Math.toRadians(-22.820103233609647),
-                roll: 0
+              heading: Cesium.Math.toRadians(154.75440050996818),
+              pitch: Cesium.Math.toRadians(-22.820104690091828),
+              roll: 0
             }
         });
       });
     });
 
-     /* viewer.camera.changed.addEventListener(() => {
+    /*
+      viewer.camera.changed.addEventListener(() => {
         const camera = viewer.camera;
         const carto = Cesium.Cartographic.fromCartesian(camera.position);
     
@@ -86,7 +89,7 @@ export default function CesiumViewer() {
 
             entity.polygon.extrudedHeight = 0;
     
-            if (nombre?.toLowerCase().includes("laborat")) {
+          if (nombre?.toLowerCase().includes("laborat")) {
               entity.polygon.material = Cesium.Color.GOLD.withAlpha(0.6);
           }  
           else if (nombre?.toLowerCase().includes("aula")) {
@@ -103,6 +106,9 @@ export default function CesiumViewer() {
           else if (nombre?.toLowerCase().includes("planta") ) {
             entity.polygon.material = Cesium.Color.BLUE.withAlpha(0.6);
           }
+          else if (nombre?.toLowerCase().includes("respel") ) {
+            entity.polygon.material = Cesium.Color.RED.withAlpha(0.6);
+          }
           else {
               entity.polygon.material = Cesium.Color.WHITE.withAlpha(0.6);
           }
@@ -111,58 +117,100 @@ export default function CesiumViewer() {
             // Bordes
             entity.polygon.outline = true;
             entity.polygon.outlineColor = Cesium.Color.BLACK;
+
+
+            // Calcular centro del polígono
+            const hierarchy = entity.polygon.hierarchy.getValue();
+            const positions = hierarchy.positions;
+
+            const center = Cesium.BoundingSphere.fromPoints(positions).center;
+
+            // ASIGNAR POSICIÓN (esto es lo que te falta)
+            entity.position = center;
+
+            // CREAR LABEL
+            entity.label = new Cesium.LabelGraphics({
+              text: nombre,
+              font: "13px sans-serif",
+              fillColor: Cesium.Color.WHITE,
+              outlineColor: Cesium.Color.BLACK,
+              outlineWidth: 2,
+              style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+              showBackground: true,
+              backgroundColor: Cesium.Color.BLACK.withAlpha(0.6),
+              verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+              pixelOffset: new Cesium.Cartesian2(0, -10),
+              distanceDisplayCondition: new Cesium.DistanceDisplayCondition(
+                0,      // distancia mínima (cerca)
+                380    // distancia máxima (lejos)
+              )
+            });
+
+
           }
         });
     
       }).catch(error => {
         console.error("Error cargando GeoJSON:", error);
       });
-      
 
 
-      /*
-      const urlSede = "http://136.113.129.29:8400/api/v1/data/sede/data.geojson";
 
-      Cesium.GeoJsonDataSource.load(urlSede, {
-        clampToGround: true   // 🔥 IMPORTANTE
-      }).then((dataSource2) => {
-      
-        viewer.dataSources.add(dataSource2); // 🔥 faltaba esto
-      
-        viewer.zoomTo(dataSource2);
-      
-        dataSource2.entities.values.forEach((entity, i) => {
-          try {
-            if (!entity.polygon) return;
-      
-            const hierarchy = entity.polygon.hierarchy?.getValue();
-      
-            if (!hierarchy || !hierarchy.positions) {
-              console.warn("❌ Geometría inválida en entity:", i);
-              entity.show = false;
-              return;
-            }
-      
-            hierarchy.positions.forEach((pos, idx) => {
-              if (!pos || isNaN(pos.x) || isNaN(pos.y) || isNaN(pos.z)) {
-                console.warn("❌ Coordenada inválida:", i, idx);
-                entity.show = false;
-              }
+      const urlSede = `${server}/api/v1/data/sede/data.geojson`;
+
+            Cesium.GeoJsonDataSource.load(urlSede, {
+              clampToGround: false
+            }).then((dataSource) => {
+
+              viewer.dataSources.add(dataSource);
+              dataSource.entities.values.forEach(entity => {
+   
+                if (entity.polygon) {
+
+                  const nombre =
+                    entity.properties?.nombre?.getValue() ||
+                    entity.properties?.id?.getValue() ||
+                    "Predio";
+
+                  const hierarchy = entity.polygon.hierarchy.getValue();
+                  const positions = hierarchy.positions;
+
+             
+                  const center = Cesium.BoundingSphere.fromPoints(positions).center;
+
+            
+                  entity.polyline = {
+                    positions: positions,
+                    width: 5,
+                    material: Cesium.Color.CYAN,
+                    clampToGround: true
+                  };
+
+           
+                  entity.polygon = undefined;
+
+         
+                  entity.position = center;
+
+                  entity.label = new Cesium.LabelGraphics({
+                    text: nombre,
+                    font: "14px sans-serif",
+                    fillColor: Cesium.Color.WHITE,
+                    outlineColor: Cesium.Color.BLACK,
+                    outlineWidth: 2,
+                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                    showBackground: true,
+                    backgroundColor: Cesium.Color.BLACK.withAlpha(0.6),
+                    distanceDisplayCondition: new Cesium.DistanceDisplayCondition(200, 5000)
+                  });
+                }
+
+              });
+
+            }).catch(error => {
+              console.error("Error cargando GeoJSON:", error);
             });
-      
-          } catch (e) {
-            console.error("💥 Error en entidad:", i, e);
-            entity.show = false;
-          }
-        });
-      
-      }).catch(error => {
-        console.error("Error cargando GeoJSON:", error);
-      });
-
-*/
-
-
+                
 
     return () => {
       viewer.destroy();
@@ -171,9 +219,14 @@ export default function CesiumViewer() {
   
 
   return (
+    <div style={{width: "100%", height: "100vh", position: "relative" }}>
     <div
       ref={viewerRef}
-      style={{ width: "100%", height: "100vh" }}
+      style={{ width: "100%", height: "100%" }}
     />
+    <Legend />
+    </div>
+
+    
   );
 }
