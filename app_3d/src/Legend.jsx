@@ -4,11 +4,11 @@ const legendItems = [
   { key: "laboratorio", label: "Laboratorios", color: "gold" },
   { key: "aula", label: "Aulas", color: "orange" },
   { key: "cafeteria", label: "Cafetería", color: "chocolate" },
-  { key: "temporal", label: "Temporales", color: "darkgray" },
-  { key: "gimnasio", label: "Deportivas", color: "rosybrown" },
-  { key: "planta", label: "Planta de tratamiento de agua", color: "blue" },
+  { key: "temporal", label: "Instalaciones temporales", color: "darkgray" },
+  { key: "gimnasio", label: "Instalaciones deportivas", color: "rosybrown" },
+  { key: "planta", label: "Plantas de tratamiento de agua", color: "blue" },
   { key: "respel", label: "Residuos peligrosos", color: "red" },
-  { key: "otros", label: "Dotacional", color: "white", border: "1px solid black" },
+  { key: "otros", label: "Instalaciones Dotacionales", color: "white", border: "1px solid black" },
 ];
 
 const Legend = () => {
