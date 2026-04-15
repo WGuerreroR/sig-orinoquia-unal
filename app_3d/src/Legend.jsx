@@ -8,7 +8,7 @@ const legendItems = [
   { key: "gimnasio", label: "Instalaciones deportivas", color: "rosybrown" },
   { key: "planta", label: "Plantas de tratamiento de agua", color: "blue" },
   { key: "respel", label: "Residuos peligrosos", color: "red" },
-  { key: "otros", label: "Instalaciones Dotacionales", color: "white", border: "1px solid black" },
+  { key: "otros", label: "Instalaciones dotacionales", color: "white", border: "1px solid black" },
 ];
 
 const Legend = () => {
@@ -54,8 +54,8 @@ const Legend = () => {
 const styles = {
   container: {
     position: "absolute",
-    top: "20px",
-    left: "20px",
+    top: "10px",
+    left: "10px",
     background: "rgba(30,30,30,0.9)",
     padding: "10px",
     borderRadius: "10px",
