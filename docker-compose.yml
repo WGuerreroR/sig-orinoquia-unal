@@ -82,3 +82,13 @@ services:
       uvicorn titiler.application.main:app
       --host 0.0.0.0 --port 8000 --workers 1
     restart: unless-stopped
+
+
+  gdal:
+    image: ghcr.io/osgeo/gdal:ubuntu-small-latest
+    platform: linux/amd64
+    volumes:
+      # MISMA carpeta que titiler -> las rutas /data/... coinciden en ambos.
+      - ./data/titiler:/data
+    working_dir: /data
+    profiles: ["tools"]
