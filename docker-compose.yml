@@ -63,3 +63,22 @@ services:
     - QGIS_PROJECT_FILE=/data/sede_orinoquia.qgz
     - QGIS_SERVER_LOG_LEVEL=0  # INFO (log all requests)
     - DEBUG=1                  # display env before spawning QGIS Server
+
+
+  titiler:
+    image: ghcr.io/developmentseed/titiler:latest
+    platform: linux/amd64
+    ports:
+      - "8000:8000"
+    volumes:
+      # Carpeta LOCAL con tu COG  ->  se monta como /data dentro del contenedor.
+      # Pon tu salida_cog.tif dentro de ./data
+      - ./data/titiler:/data
+    environment:
+      # Permite que un visor web (Leaflet/OpenLayers/MapLibre) consuma los tiles.
+      # Para uso solo local puedes borrar esta línea.
+      - TITILER_API_CORS_ORIGIN=*
+    command: >
+      uvicorn titiler.application.main:app
+      --host 0.0.0.0 --port 8000 --workers 1
+    restart: unless-stopped
