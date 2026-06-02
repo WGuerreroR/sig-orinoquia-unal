@@ -1758,12 +1758,12 @@
             "dimensions": []
           },
           {
-            "name": "zona",
-            "title": "zona",
-            "geometryType": "MultiPolygon",
+            "name": "senal_e",
+            "title": "senal_e",
+            "geometryType": "Point",
             "visibility": true,
             "queryable": true,
-            "displayField": "OBJECTID",
+            "displayField": "nombre",
             "opacity": 255,
             "styles": {
               "predeterminado": "predeterminado"
@@ -1772,15 +1772,15 @@
             "bbox": {
               "crs": "EPSG:4326",
               "bounds": [
-                -70.746338,
-                7.006497,
-                -70.739843,
-                7.016528
+                -114.780945,
+                -10.581891,
+                -114.7808,
+                -10.581737
               ]
             },
             "dimensions": []
           },
-       
+
           {
             "name": "via_interna",
             "title": "via_interna",
@@ -1800,29 +1800,6 @@
                 7.011555,
                 -70.743514,
                 7.014375
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "anden",
-            "title": "anden",
-            "geometryType": "Polygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "id_anden",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -114.780945,
-                -10.581891,
-                -114.7808,
-                -10.581737
               ]
             },
             "dimensions": []
@@ -1868,9 +1845,7 @@
         "mapCrs": "EPSG:4326",
         "drawingOrder": [
           "sede",
-          "anden",
           "via_interna",
-          "zona",
           "parqueadero",
           "cultivo",
           "edificio",
@@ -1880,6 +1855,7 @@
           "redes_planta",
           "unidad_constructiva",
           "sendero",
+          "senal_e",
           "afectacion"
         ],
         "legendUrl": "http://136.113.129.29:8080/?",
@@ -1891,7 +1867,7 @@
       {
         "url": "http://136.113.129.29:8080",
         "id": "136.113.129.29:8080",
-        "title": "Redes acueducto y alcantarillado",
+        "title": "Redes de servicios públicos",
         "description": "",
         "attribution": {
           "Title": {
@@ -2193,185 +2169,7 @@
             },
             "dimensions": []
           },
-          {
-            "name": "edificio",
-            "title": "edificio",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "nombre",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -70.745062,
-                7.011578,
-                -70.74297,
-                7.014351
-              ]
-            },
-            "dimensions": []
-          },
-          {
-            "name": "sede",
-            "title": "sede",
-            "geometryType": "MultiPolygon",
-            "visibility": true,
-            "queryable": true,
-            "displayField": "OBJECTID",
-            "opacity": 255,
-            "styles": {
-              "predeterminado": "predeterminado"
-            },
-            "style": "predeterminado",
-            "bbox": {
-              "crs": "EPSG:4326",
-              "bounds": [
-                -81.708059,
-                -4.202718,
-                -69.868693,
-                12.678796
-              ]
-            },
-            "dimensions": []
-          }
-        ],
-        "expanded": true,
-        "externalLayers": [],
-        "backgroundLayers": [
-          {
-            "name": "mapnik",
-            "visibility": false
-          }
-        ],
-        "searchProviders": [
-       
-        ],
-        "additionalMouseCrs": [
-          "EPSG:3857"
-        ],
-        "mapCrs": "EPSG:4326",
-        "drawingOrder": [
-          "sede",
-          "edificio",
-          "redes_planta",
-          "acueducto_tramo",
-          "alcantarillado_tramo",
-          "acueducto_captacion",
-          "acueducto_hidrante",
-          "acueducto_medidor",
-          "acueducto_nodo",
-          "acueducto_valvula",
-          "alcantarillado_nodo"
-        ],
-        "legendUrl": "http://136.113.129.29:8080/?",
-        "featureInfoUrl": "http://136.113.129.29:8080/?",
-        "printUrl": "http://136.113.129.29:8080/?",
-        "editConfig": null,
-        "thumbnail": "img/mapthumbs/redes_acueducto_alcantarillado.png"
-      },
-      {
-        "url": "http://136.113.129.29:8080",
-        "id": "136.113.129.29:8080",
-        "title": "Redes de energía",
-        "description": "",
-        "attribution": {
-          "Title": {
-            "Title": {
-              "Title": "Sede Orinoquía",
-              "OnlineResource": "https://orinoquia.unal.edu.co/"
-            },
-            "OnlineResource": ""
-          },
-          "OnlineResource": ""
-        },
-        "abstract": "",
-        "keywords": "",
-        "onlineResource": "http://136.113.129.29:8080/",
-        "contact": {
-          "person": "",
-          "organization": "",
-          "position": "",
-          "phone": "",
-          "email": ""
-        },
-        "availableFormats": [
-          "image/jpeg",
-          "image/png",
-          "image/png; mode=16bit",
-          "image/png; mode=8bit",
-          "image/png; mode=1bit",
-          "application/dxf",
-          "application/pdf"
-        ],
-        "version": "1.3.0",
-        "infoFormats": [
-          "text/plain",
-          "text/html",
-          "text/xml",
-          "application/vnd.ogc.gml",
-          "application/vnd.ogc.gml/3.1.1",
-          "application/json",
-          "application/geo+json"
-        ],
-        "bbox": {
-          "crs": "EPSG:4326",
-          "bounds": [
-            -114.780945,
-            -10.581891,
-            -69.757789,
-            12.678796
-          ]
-        },
-        "initialBbox": {
-          "crs": "EPSG:4326",
-          "bounds": [
-            -70.758872796,
-            7.00441992,
-            -70.729930525,
-            7.019297933
-          ]
-        },
-        "scales": [
-          150000,
-          100000,
-          80000,
-          40000,
-          20000,
-          10000,
-          8000,
-          6000,
-          4000,
-          2000,
-          1000,
-          500,
-          250,
-          100
-        ],
-        "printScales": [
-          80000,
-          40000,
-          20000,
-          10000,
-          8000,
-          6000,
-          4000,
-          2000,
-          1000,
-          500,
-          250,
-          100
-        ],
-        "printResolutions": [
-          150,
-          300,
-          600
-        ],
-        "sublayers": [
+          
           {
             "name": "energia_transformador",
             "title": "energia_transformador",
@@ -2487,6 +2285,7 @@
             },
             "dimensions": []
           },
+
           {
             "name": "sede",
             "title": "sede",
@@ -2528,7 +2327,16 @@
         "mapCrs": "EPSG:4326",
         "drawingOrder": [
           "sede",
+          "edificio",
           "redes_planta",
+          "acueducto_tramo",
+          "alcantarillado_tramo",
+          "acueducto_captacion",
+          "acueducto_hidrante",
+          "acueducto_medidor",
+          "acueducto_nodo",
+          "acueducto_valvula",
+          "alcantarillado_nodo",
           "energia_linea",
           "energia_nodo",
           "energia_poste",
@@ -2539,8 +2347,9 @@
         "featureInfoUrl": "http://136.113.129.29:8080/?",
         "printUrl": "http://136.113.129.29:8080/?",
         "editConfig": null,
-        "thumbnail": "img/mapthumbs/red_energia.png"
+        "thumbnail": "img/mapthumbs/redes_acueducto_alcantarillado.png"
       },
+      
       {
         "url": "http://136.113.129.29:8080",
         "id": "136.113.129.29:8080",
